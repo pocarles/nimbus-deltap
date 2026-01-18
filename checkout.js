@@ -1,34 +1,17 @@
 /**
  * Nimbus ∆P — Stripe Checkout Integration
  *
- * This handles the $100 deposit pre-order flow.
- *
- * SETUP REQUIRED:
- * 1. Replace STRIPE_PUBLISHABLE_KEY with your actual key
- * 2. Create two products in Stripe Dashboard:
- *    - "∆P Standard Kit Deposit" at $100
- *    - "∆P Extended Kit Deposit" at $100
- * 3. Create Payment Links for each product and update the URLs below
- *
- * OPTION A: Stripe Payment Links (Simplest - No backend needed)
- * OPTION B: Stripe Checkout with your own backend (More control)
+ * Calls /api/create-checkout to create a Stripe Checkout Session
+ * and redirects the user to complete payment.
  */
 
 // =============================================================================
-// CONFIGURATION — UPDATE THESE VALUES
+// CONFIGURATION
 // =============================================================================
 
 const CONFIG = {
-    // Option A: Payment Links (recommended for MVP)
-    // Create these in Stripe Dashboard > Payment Links
-    paymentLinks: {
-        standard: 'https://buy.stripe.com/YOUR_STANDARD_KIT_LINK',
-        extended: 'https://buy.stripe.com/YOUR_EXTENDED_KIT_LINK'
-    },
-
-    // Option B: Checkout Sessions (requires backend)
-    // Uncomment and configure if using server-side checkout
-    // checkoutEndpoint: 'https://your-api.com/create-checkout-session',
+    // API endpoint (relative URL works on same domain)
+    checkoutEndpoint: '/api/create-checkout',
 
     // Product metadata for tracking
     products: {
@@ -60,38 +43,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function handlePreOrder(event) {
+async function handlePreOrder(event) {
     event.preventDefault();
 
     const button = event.currentTarget;
     const productType = button.getAttribute('data-product');
 
-    if (!productType || !CONFIG.paymentLinks[productType]) {
+    if (!productType || !CONFIG.products[productType]) {
         console.error('Invalid product type:', productType);
         return;
     }
 
     // Show loading state
     const originalText = button.textContent;
-    button.textContent = 'Redirecting...';
+    button.textContent = 'Loading...';
     button.disabled = true;
 
-    // Track the click (add your analytics here)
-    trackPreOrderClick(productType);
+    try {
+        // Track the click (analytics)
+        trackPreOrderClick(productType);
 
-    // Redirect to Stripe Payment Link
-    // This is the simplest approach — no backend needed
-    window.location.href = CONFIG.paymentLinks[productType];
+        // Call our API to create a checkout session
+        const response = await fetch(CONFIG.checkoutEndpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ product: productType })
+        });
 
-    // Reset button after delay (in case redirect fails)
-    setTimeout(() => {
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Failed to create checkout session');
+        }
+
+        if (data.url) {
+            // Redirect to Stripe Checkout
+            window.location.href = data.url;
+        } else {
+            throw new Error('No checkout URL returned');
+        }
+
+    } catch (error) {
+        console.error('Checkout error:', error);
+        alert('Something went wrong. Please try again or contact support.');
+
+        // Reset button
         button.textContent = originalText;
         button.disabled = false;
-    }, 3000);
+    }
 }
 
 // =============================================================================
-// ANALYTICS / TRACKING (Optional)
+// ANALYTICS / TRACKING
 // =============================================================================
 
 function trackPreOrderClick(productType) {
@@ -129,39 +134,3 @@ function trackPreOrderClick(productType) {
         deposit: product.deposit
     });
 }
-
-// =============================================================================
-// ALTERNATIVE: Stripe Checkout Sessions (Server-side)
-//
-// If you want more control, you can create checkout sessions on a backend.
-// Uncomment and modify the function below if needed.
-// =============================================================================
-
-/*
-async function handlePreOrderWithBackend(productType) {
-    try {
-        const response = await fetch(CONFIG.checkoutEndpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                product: productType,
-                successUrl: window.location.origin + '/thank-you',
-                cancelUrl: window.location.href
-            })
-        });
-
-        const { url } = await response.json();
-
-        if (url) {
-            window.location.href = url;
-        } else {
-            throw new Error('No checkout URL returned');
-        }
-    } catch (error) {
-        console.error('Checkout error:', error);
-        alert('Something went wrong. Please try again or contact support.');
-    }
-}
-*/

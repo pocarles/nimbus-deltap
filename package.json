@@ -1,0 +1,12 @@
+{
+  "name": "nimbus-deltap",
+  "version": "1.0.0",
+  "description": "Nimbus ∆P Pre-Order Landing Page",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}

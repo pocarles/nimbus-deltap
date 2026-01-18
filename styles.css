@@ -604,6 +604,140 @@ h4 { font-size: var(--font-size-xl); }
 }
 
 /* ==========================================================================
+   Partners Section
+   ========================================================================== */
+
+.partners {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+}
+
+.partners .section-header h2 {
+    color: var(--color-white);
+}
+
+.partners .section-header p {
+    color: var(--color-gray-400);
+}
+
+.partners .badge {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: var(--color-accent);
+}
+
+.partner-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--spacing-3xl);
+    align-items: start;
+}
+
+.partner-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.partner-benefit {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+}
+
+.partner-benefit-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-gray-800);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+}
+
+.partner-benefit-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.partner-benefit-content h4 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.partner-benefit-content p {
+    color: var(--color-gray-400);
+    font-size: var(--font-size-sm);
+}
+
+.partner-cta-card {
+    background-color: var(--color-gray-800);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    border: 1px solid var(--color-gray-700);
+}
+
+.partner-cta-card h3 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+}
+
+.partner-ideal-list {
+    list-style: none;
+    margin-bottom: var(--spacing-xl);
+}
+
+.partner-ideal-list li {
+    position: relative;
+    padding-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-300);
+    font-size: var(--font-size-sm);
+}
+
+.partner-ideal-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.partner-economics {
+    background-color: var(--color-gray-700);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.partner-economics h4 {
+    color: var(--color-gray-400);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.partner-math {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+}
+
+.partner-math strong {
+    color: var(--color-accent);
+    font-size: var(--font-size-xl);
+}
+
+.partner-note {
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-align: center;
+}
+
+/* ==========================================================================
    FAQ Section
    ========================================================================== */
 
@@ -780,6 +914,14 @@ h4 { font-size: var(--font-size-xl); }
 
     .products-grid {
         grid-template-columns: 1fr;
+    }
+
+    .partner-content {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-cta-card {
+        order: -1;
     }
 
     .footer-content {
