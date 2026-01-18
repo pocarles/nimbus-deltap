@@ -1,13 +1,13 @@
 /**
- * Nimbus Delta-P — Stripe Checkout Integration
+ * Nimbus ∆P — Stripe Checkout Integration
  *
  * This handles the $100 deposit pre-order flow.
  *
  * SETUP REQUIRED:
  * 1. Replace STRIPE_PUBLISHABLE_KEY with your actual key
  * 2. Create two products in Stripe Dashboard:
- *    - "Delta-P Standard Kit Deposit" at $100
- *    - "Delta-P Extended Kit Deposit" at $100
+ *    - "∆P Standard Kit Deposit" at $100
+ *    - "∆P Extended Kit Deposit" at $100
  * 3. Create Payment Links for each product and update the URLs below
  *
  * OPTION A: Stripe Payment Links (Simplest - No backend needed)
@@ -33,13 +33,13 @@ const CONFIG = {
     // Product metadata for tracking
     products: {
         standard: {
-            name: 'Delta-P Standard Kit',
+            name: '∆P Standard Kit',
             deposit: 100,
             fullPrice: 849,
             description: 'Head Unit V2, Gauge, Hose, 1x Filled Cartridge'
         },
         extended: {
-            name: 'Delta-P Extended Kit',
+            name: '∆P Extended Kit',
             deposit: 100,
             fullPrice: 1099,
             description: 'Head Unit V2, Gauge, Hose, 2x Filled Cartridges'

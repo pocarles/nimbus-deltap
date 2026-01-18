@@ -1,4 +1,4 @@
-# Delta-P Landing Page — Setup Guide
+# ∆P Landing Page — Setup Guide
 
 ## Quick Start
 
@@ -12,14 +12,14 @@ This landing page uses Stripe Payment Links for the simplest possible checkout f
 2. Click **+ Add Product**
 
 ### Product 1: Standard Kit Deposit
-- **Name:** Delta-P Standard Kit — $100 Deposit
-- **Description:** Reserve your Delta-P Standard Kit ($849 total). $100 deposit today, $749 + shipping due before shipment.
+- **Name:** ∆P Standard Kit — $100 Deposit
+- **Description:** Reserve your ∆P Standard Kit ($849 total). $100 deposit today, $749 + shipping due before shipment.
 - **Price:** $100.00 USD (One-time)
 - Click **Save**
 
 ### Product 2: Extended Kit Deposit
-- **Name:** Delta-P Extended Kit — $100 Deposit
-- **Description:** Reserve your Delta-P Extended Kit ($1,099 total). $100 deposit today, $999 + shipping due before shipment.
+- **Name:** ∆P Extended Kit — $100 Deposit
+- **Description:** Reserve your ∆P Extended Kit ($1,099 total). $100 deposit today, $999 + shipping due before shipment.
 - **Price:** $100.00 USD (One-time)
 - Click **Save**
 
@@ -31,7 +31,7 @@ This landing page uses Stripe Payment Links for the simplest possible checkout f
 2. Click **+ New**
 
 ### Link 1: Standard Kit
-- Select "Delta-P Standard Kit — $100 Deposit"
+- Select "∆P Standard Kit — $100 Deposit"
 - **After payment:** Redirect to your thank-you page (e.g., `https://your-domain.com/thank-you.html`)
 - **Collect:** Email address (required), Shipping address (recommended)
 - Click **Create link**
@@ -65,7 +65,7 @@ const CONFIG = {
 
 1. Create a GitHub repo:
    ```bash
-   cd /Users/bigbrother/Documents/Claude-Projects/Delta-P/landing-page
+   cd /Users/bigbrother/Documents/Claude-Projects/∆P/landing-page
    git init
    git add .
    git commit -m "Initial landing page"
