@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In! | Nimbus Delta-P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thank-you {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-xl);
+            background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+        }
+
+        .thank-you-content {
+            max-width: 600px;
+        }
+
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-xl);
+            background-color: var(--color-success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thank-you-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .thank-you h1 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .thank-you-subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--color-gray-600);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .next-steps {
+            background-color: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-md);
+            text-align: left;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .next-steps h3 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .next-steps ol {
+            margin-left: var(--spacing-lg);
+        }
+
+        .next-steps li {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-gray-700);
+        }
+
+        .next-steps li strong {
+            color: var(--color-gray-900);
+        }
+
+        .share-section {
+            margin-top: var(--spacing-2xl);
+        }
+
+        .share-section p {
+            color: var(--color-gray-600);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: var(--color-gray-100);
+            border-radius: var(--radius-md);
+            color: var(--color-gray-600);
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="thank-you">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+
+            <h1>You're on the list!</h1>
+            <p class="thank-you-subtitle">Your $100 deposit has been received. You're officially part of the first batch of Delta-P owners.</p>
+
+            <div class="next-steps">
+                <h3>What happens next?</h3>
+                <ol>
+                    <li><strong>Confirmation email:</strong> Check your inbox for your receipt and order details.</li>
+                    <li><strong>Production updates:</strong> We'll email you with progress updates as we prepare for shipment.</li>
+                    <li><strong>Balance due notice:</strong> When your kit is ready to ship (est. Q2 2026), we'll send a secure link to pay the remaining balance.</li>
+                    <li><strong>Shipment:</strong> Once paid, your Delta-P ships within 3-5 business days.</li>
+                </ol>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+
+            <div class="share-section">
+                <p>Spread the word:</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/intent/tweet?text=Just%20reserved%20my%20Nimbus%20Delta-P%20%E2%80%94%20the%20first%20pre-filled%20nitrogen%20system%20for%20shock%20adjustments.%20No%20more%20welding%20shop%20visits!&url=" class="social-link" target="_blank" rel="noopener" title="Share on Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="social-link" target="_blank" rel="noopener" title="Share on Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversion tracking -->
+    <script>
+        // Google Analytics 4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase', {
+                transaction_id: 'preorder_' + Date.now(),
+                value: 100,
+                currency: 'USD',
+                items: [{
+                    item_name: 'Delta-P Pre-Order Deposit',
+                    price: 100,
+                    quantity: 1
+                }]
+            });
+        }
+
+        // Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Purchase', {
+                value: 100,
+                currency: 'USD'
+            });
+        }
+    </script>
+</body>
+</html>
