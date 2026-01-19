@@ -4,113 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You're In! | Nimbus ∆P</title>
+    <meta name="description" content="Your reservation is confirmed. Welcome to the first generation of ∆P owners.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .thank-you {
+        .thank-you-page {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: var(--spacing-xl);
-            background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+            padding: 80px 2rem;
+            background: var(--gray-950);
+            position: relative;
+            overflow: hidden;
         }
-
+        .thank-you-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
         .thank-you-content {
             max-width: 600px;
+            position: relative;
+            z-index: 1;
         }
-
         .thank-you-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto var(--spacing-xl);
-            background-color: var(--color-success);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #60a5fa 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.4);
+            animation: pulse-glow 2s ease-in-out infinite;
         }
-
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 60px rgba(59, 130, 246, 0.4); }
+            50% { box-shadow: 0 0 80px rgba(59, 130, 246, 0.6); }
+        }
         .thank-you-icon svg {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
             color: white;
         }
-
-        .thank-you h1 {
-            margin-bottom: var(--spacing-md);
+        .thank-you-content h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
         }
-
         .thank-you-subtitle {
-            font-size: var(--font-size-xl);
-            color: var(--color-gray-600);
-            margin-bottom: var(--spacing-2xl);
+            font-size: 1.25rem;
+            color: var(--gray-400);
+            margin-bottom: 3rem;
+            line-height: 1.6;
         }
-
         .next-steps {
-            background-color: var(--color-white);
-            border-radius: var(--radius-xl);
-            padding: var(--spacing-2xl);
-            box-shadow: var(--shadow-md);
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 16px;
+            padding: 2rem;
             text-align: left;
-            margin-bottom: var(--spacing-2xl);
+            margin-bottom: 2rem;
         }
-
         .next-steps h3 {
-            margin-bottom: var(--spacing-lg);
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 1.5rem;
         }
-
         .next-steps ol {
-            margin-left: var(--spacing-lg);
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+            counter-reset: steps;
         }
-
         .next-steps li {
-            margin-bottom: var(--spacing-md);
-            color: var(--color-gray-700);
+            counter-increment: steps;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            color: var(--gray-400);
+            line-height: 1.6;
         }
-
+        .next-steps li:last-child {
+            margin-bottom: 0;
+        }
+        .next-steps li::before {
+            content: counter(steps);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            height: 28px;
+            background: var(--accent);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
         .next-steps li strong {
-            color: var(--color-gray-900);
+            color: var(--gray-200);
         }
-
+        .thank-you-cta {
+            margin-bottom: 2.5rem;
+        }
+        .thank-you-cta .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+        }
+        .thank-you-cta .btn-primary:hover {
+            background: var(--gray-700);
+            border-color: var(--gray-600);
+        }
         .share-section {
-            margin-top: var(--spacing-2xl);
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-800);
         }
-
         .share-section p {
-            color: var(--color-gray-600);
-            margin-bottom: var(--spacing-md);
+            color: var(--gray-500);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
-
         .social-links {
             display: flex;
             justify-content: center;
-            gap: var(--spacing-md);
+            gap: 0.75rem;
         }
-
         .social-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 44px;
             height: 44px;
-            background-color: var(--color-gray-100);
-            border-radius: var(--radius-md);
-            color: var(--color-gray-600);
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 10px;
+            color: var(--gray-400);
             transition: all 0.2s ease;
         }
-
         .social-link:hover {
-            background-color: var(--color-primary);
+            background: var(--accent);
+            border-color: var(--accent);
             color: white;
+        }
+        .footer-brand-small {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-800);
+        }
+        .footer-brand-small a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-500);
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+        .footer-brand-small a:hover {
+            color: var(--gray-300);
+        }
+        .footer-brand-small img {
+            height: 24px;
+            opacity: 0.6;
+        }
+        @media (max-width: 640px) {
+            .thank-you-content h1 {
+                font-size: 2rem;
+            }
+            .thank-you-subtitle {
+                font-size: 1.1rem;
+            }
+            .next-steps {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <section class="thank-you">
+    <section class="thank-you-page">
         <div class="thank-you-content">
             <div class="thank-you-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
@@ -119,7 +212,7 @@
             </div>
 
             <h1>You're on the list!</h1>
-            <p class="thank-you-subtitle">Your $100 deposit has been received. You're officially part of the first batch of ∆P owners.</p>
+            <p class="thank-you-subtitle">Your $100 deposit has been received. You're officially part of the first generation of ∆P owners.</p>
 
             <div class="next-steps">
                 <h3>What happens next?</h3>
@@ -131,22 +224,36 @@
                 </ol>
             </div>
 
-            <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+            <div class="thank-you-cta">
+                <a href="index.html" class="btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Back to Homepage</span>
+                </a>
+            </div>
 
             <div class="share-section">
-                <p>Spread the word:</p>
+                <p>Know someone who'd love this? Share the word:</p>
                 <div class="social-links">
-                    <a href="https://twitter.com/intent/tweet?text=Just%20reserved%20my%20Nimbus%20∆P%20%E2%80%94%20the%20first%20pre-filled%20nitrogen%20system%20for%20shock%20adjustments.%20No%20more%20welding%20shop%20visits!&url=" class="social-link" target="_blank" rel="noopener" title="Share on Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://twitter.com/intent/tweet?text=Just%20reserved%20my%20Nimbus%20∆P%20—%20a%20portable%20nitrogen%20system%20for%20suspension%20tuning%20that%20ships%20pre-filled%20and%20ready%20to%20use.%20Pretty%20slick.&url=https://delta-p.nimbus-suspensions.com" class="social-link" target="_blank" rel="noopener" title="Share on X">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                         </svg>
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="social-link" target="_blank" rel="noopener" title="Share on Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://delta-p.nimbus-suspensions.com" class="social-link" target="_blank" rel="noopener" title="Share on Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
                 </div>
+            </div>
+
+            <div class="footer-brand-small">
+                <a href="https://nimbus-suspensions.com" target="_blank">
+                    <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions">
+                    <span>nimbus-suspensions.com</span>
+                </a>
             </div>
         </div>
     </section>

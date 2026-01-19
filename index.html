@@ -3,381 +3,704 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nimbus ∆P | Portable Nitrogen System for Shock Adjustment</title>
-    <meta name="description" content="The only pre-filled portable nitrogen system for shock absorbers. Ships ready to use — no welding shop required. Reserve yours today.">
+    <title>Nimbus ∆P | Portable Nitrogen System for Suspension Tuning</title>
+    <meta name="description" content="The first portable nitrogen system that ships pre-filled and ready to use. Precision suspension tuning, anywhere. By Nimbus Suspensions.">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        /* Gradient mesh backgrounds - light version */
+        .gradient-mesh-1 {
+            background: radial-gradient(ellipse at 20% 30%, rgba(156,163,175,0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(209,213,219,0.06) 0%, transparent 50%);
+        }
+
+        .gradient-mesh-2 {
+            background: radial-gradient(ellipse at 70% 20%, rgba(243,244,246,0.9) 0%, transparent 50%),
+                        radial-gradient(ellipse at 30% 80%, rgba(249,250,251,0.7) 0%, transparent 50%);
+        }
+
+        /* Warm gradient backgrounds */
+        .bg-warm {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 50%, #ffffff 100%);
+        }
+
+        .bg-warm-alt {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #f9fafb 100%);
+        }
+
+        /* Smooth reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Premium hover effects */
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Glass morphism - light version */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
 </head>
-<body>
+<body class="text-gray-900 antialiased" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="images/nimbus-logo-white.png" alt="Nimbus" class="logo-img">
-            </a>
-            <nav class="nav">
-                <a href="#specs">Specs</a>
-                <a href="#kits">Kits</a>
-                <a href="#partners">Partners</a>
-                <a href="#faq">FAQ</a>
-            </nav>
-            <a href="#kits" class="btn btn-outline">PRE-ORDER</a>
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-6">
+                <a href="https://nimbus-suspensions.com" target="_blank" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-16 lg:h-20 transition-all duration-300">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
+                    <a href="#technology" class="text-gray-600 hover:text-black transition-colors">Technology</a>
+                    <a href="#specifications" class="text-gray-600 hover:text-black transition-colors">Specs</a>
+                    <a href="#faq" class="text-gray-600 hover:text-black transition-colors">FAQ</a>
+                </nav>
+                <a href="#reserve" class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                    Reserve Now
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="hero">
-        <div class="hero-bg">
-            <img src="images/hero-product.jpg" alt="Nimbus ∆P Nitrogen System">
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <p class="hero-tag">INTRODUCING</p>
-                <h1>∆P</h1>
-                <p class="hero-subtitle">Portable Nitrogen Adjustment System</p>
-                <p class="hero-desc">The only system that ships <strong>pre-filled and ready to use</strong>.<br>No welding shop. No waiting. Just performance.</p>
-                <div class="hero-cta">
-                    <a href="#kits" class="btn btn-primary">RESERVE YOURS</a>
-                    <span class="hero-deposit">$100 deposit · Ships Q2 2026</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #fafafa 0%, #ffffff 50%, #f9fafb 100%);">
+        <!-- Ambient gradient -->
+        <div class="absolute inset-0 gradient-mesh-1"></div>
 
-    <!-- Value Prop -->
-    <section class="value-prop">
-        <div class="container">
-            <div class="value-grid">
-                <div class="value-item">
-                    <span class="value-number">725</span>
-                    <span class="value-unit">PSI</span>
-                    <span class="value-label">Output Pressure</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-number">54</span>
-                    <span class="value-unit">L</span>
-                    <span class="value-label">Per Cartridge</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-number">1.5</span>
-                    <span class="value-unit">kg</span>
-                    <span class="value-label">Total Weight</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-number">2</span>
-                    <span class="value-unit">YR</span>
-                    <span class="value-label">Warranty</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem/Solution -->
-    <section class="comparison">
-        <div class="container">
-            <div class="comparison-grid">
-                <div class="comparison-col comparison-problem">
-                    <span class="comparison-tag">THE OLD WAY</span>
-                    <h2>Buy. Wait. Hunt.</h2>
-                    <p>Competitors ship empty vessels. Before your first use, you're driving around town looking for a welding shop that can fill it with nitrogen. Days wasted. Money spent. Frustration guaranteed.</p>
-                    <ul>
-                        <li>Ships empty — unusable out of box</li>
-                        <li>Requires welding shop visit</li>
-                        <li>Unpredictable wait times</li>
-                        <li>Added cost for first fill</li>
-                    </ul>
-                </div>
-                <div class="comparison-col comparison-solution">
-                    <span class="comparison-tag">THE ∆P WAY</span>
-                    <h2>Unbox. Connect. Adjust.</h2>
-                    <p>∆P arrives filled and ready. Open the box, connect to your shock, dial in your pressure. That's it. We handle the complexity so you can focus on performance.</p>
-                    <ul>
-                        <li>Ships pre-filled with nitrogen</li>
-                        <li>Ready to use immediately</li>
-                        <li>Nationwide refill network</li>
-                        <li>Professional-grade precision</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Action Shot -->
-    <section class="action-shot">
-        <div class="action-image">
-            <img src="images/action-garage.jpg" alt="Using ∆P to adjust shock pressure">
-        </div>
-        <div class="action-content">
-            <h2>Built for the garage.<br>Ready for the trail.</h2>
-            <p>Whether you're prepping for race day or fine-tuning after a long trip, ∆P gives you the control professionals have. Compact enough to throw in your toolbox, powerful enough to handle any shock on the market.</p>
-        </div>
-    </section>
-
-    <!-- Why Nitrogen -->
-    <section class="why-nitrogen">
-        <div class="container">
-            <h2>WHY NITROGEN?</h2>
-            <p class="section-subtitle">Every professional race team uses N₂. Now you can too.</p>
-            <div class="nitrogen-grid">
-                <div class="nitrogen-card">
-                    <h4>Pressure Stability</h4>
-                    <p>Maintains consistent pressure over time. No gradual loss, no constant re-checking.</p>
-                </div>
-                <div class="nitrogen-card">
-                    <h4>Zero Moisture</h4>
-                    <p>Unlike air, nitrogen is bone dry. No internal corrosion, predictable behavior in any weather.</p>
-                </div>
-                <div class="nitrogen-card">
-                    <h4>Consistent Damping</h4>
-                    <p>Stable gas properties mean identical performance on a cold morning or hot afternoon.</p>
-                </div>
-                <div class="nitrogen-card">
-                    <h4>Longer Life</h4>
-                    <p>Nitrogen is inert — no oxidation, no seal degradation. Your shocks last longer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specs -->
-    <section class="specs" id="specs">
-        <div class="container">
-            <div class="specs-layout">
-                <div class="specs-image">
-                    <img src="images/product-full.jpg" alt="∆P System Components">
-                </div>
-                <div class="specs-content">
-                    <h2>SPECIFICATIONS</h2>
-                    <p class="section-subtitle">CNC-machined aluminum. Precision engineering.</p>
-                    <table class="specs-table">
-                        <tr>
-                            <td>Storage Pressure</td>
-                            <td>120 bar</td>
-                        </tr>
-                        <tr>
-                            <td>Output Range</td>
-                            <td>0–50 bar (0–725 PSI)</td>
-                        </tr>
-                        <tr>
-                            <td>Gas Volume</td>
-                            <td>~54 liters N₂ per cartridge</td>
-                        </tr>
-                        <tr>
-                            <td>Cartridge Size</td>
-                            <td>61mm Ø × 300mm</td>
-                        </tr>
-                        <tr>
-                            <td>Total Weight</td>
-                            <td>~1.5 kg (3.3 lbs)</td>
-                        </tr>
-                        <tr>
-                            <td>Gauge Standard</td>
-                            <td>EN 837-1, Class 2.5</td>
-                        </tr>
-                        <tr>
-                            <td>Safety Rating</td>
-                            <td>Tested to 300 bar</td>
-                        </tr>
-                        <tr>
-                            <td>Construction</td>
-                            <td>CNC Billet Aluminum</td>
-                        </tr>
-                        <tr>
-                            <td>Warranty</td>
-                            <td>2 Years</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gauge Detail -->
-    <section class="gauge-detail">
-        <div class="container">
-            <div class="gauge-layout">
-                <div class="gauge-content">
-                    <h2>PRECISION CONTROL</h2>
-                    <p>The dual-scale analog gauge reads both bar and PSI simultaneously. Liquid-filled for vibration dampening. Class 2.5 accuracy meets EN 837-1 standards — the same spec used in industrial applications where precision matters.</p>
-                    <p>The bleed valve gives you fine control over output pressure. Dial in exactly what your shocks need, from 0 to 725 PSI.</p>
-                </div>
-                <div class="gauge-image">
-                    <img src="images/gauge-detail.jpg" alt="∆P Precision Gauge">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products -->
-    <section class="products" id="kits">
-        <div class="container">
-            <h2>CHOOSE YOUR KIT</h2>
-            <p class="section-subtitle">Reserve now with a $100 deposit. Pay the balance when your kit ships.</p>
-            <div class="products-grid">
-                <div class="product-card">
-                    <span class="product-tag">STANDARD</span>
-                    <div class="product-price">
-                        <span class="price-amount">$849</span>
-                        <span class="price-note">+ shipping</span>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-40">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-8 reveal active">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full glass-dark">
+                        <span class="text-xs font-mono text-gray-600 uppercase tracking-wider">From the makers of Nimbus Suspensions</span>
                     </div>
-                    <ul class="product-list">
-                        <li>Head Unit V2 (CNC Aluminum)</li>
-                        <li>Precision Analog Gauge (0-50 bar)</li>
-                        <li>High-pressure Hose Assembly</li>
-                        <li>1× Pre-filled Nitrogen Cartridge</li>
-                        <li>Protective Carry Case</li>
-                    </ul>
-                    <p class="product-ideal">For weekend warriors and personal garage use</p>
-                    <button class="btn btn-primary btn-block" data-product="standard">
-                        RESERVE — $100 DEPOSIT
-                    </button>
-                </div>
-                <div class="product-card product-featured">
-                    <span class="product-tag">EXTENDED</span>
-                    <div class="product-badge">BEST VALUE</div>
-                    <div class="product-price">
-                        <span class="price-amount">$1,099</span>
-                        <span class="price-note">+ shipping</span>
-                    </div>
-                    <ul class="product-list">
-                        <li>Head Unit V2 (CNC Aluminum)</li>
-                        <li>Precision Analog Gauge (0-50 bar)</li>
-                        <li>High-pressure Hose Assembly</li>
-                        <li>2× Pre-filled Nitrogen Cartridges</li>
-                        <li>Protective Carry Case</li>
-                    </ul>
-                    <p class="product-ideal">For serious enthusiasts, multi-vehicle households, and remote trips</p>
-                    <button class="btn btn-primary btn-block" data-product="extended">
-                        RESERVE — $100 DEPOSIT
-                    </button>
-                </div>
-            </div>
-            <p class="products-note">
-                <strong>How it works:</strong> $100 deposit secures your spot. We'll email you when production is complete (est. Q2 2026) to collect the remaining balance. Full refund available anytime before shipping.
-            </p>
-        </div>
-    </section>
 
-    <!-- Partners -->
-    <section class="partners" id="partners">
-        <div class="container">
-            <div class="partners-header">
-                <span class="partners-tag">PARTNER PROGRAM</span>
-                <h2>BECOME A ∆P REFILL PARTNER</h2>
-                <p class="section-subtitle">Add a profitable new service to your shop. Minimal investment, maximum margins.</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partners-benefits">
-                    <div class="partner-benefit">
-                        <h4>81% Margin Per Refill</h4>
-                        <p>Charge $30 per refill, keep $24.50. Gas costs are negligible when you already have nitrogen on tap.</p>
+                    <div>
+                        <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Introducing</p>
+                        <h1 class="text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight text-black">∆P</h1>
+                        <p class="text-xl lg:text-2xl font-light text-gray-600 mt-4">Portable Nitrogen System for Suspension Tuning</p>
                     </div>
-                    <div class="partner-benefit">
-                        <h4>Drive Foot Traffic</h4>
-                        <p>∆P owners need refills. We list your shop on our partner map and send customers your way.</p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-lg">
+                        We built this for ourselves. Now we're gauging demand to see if we should produce it for others.
+                        <span class="font-semibold text-black">Pre-filled and ready to use</span>—shipping Q2 2026 if there's enough interest.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#reserve" class="group inline-flex items-center justify-center px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                            <span>Reserve Your Spot</span>
+                            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#story" class="inline-flex items-center justify-center px-8 py-4 border border-gray-300 text-black font-semibold rounded-full hover:border-black transition-all duration-300">
+                            Learn More
+                        </a>
                     </div>
-                    <div class="partner-benefit">
-                        <h4>Simple Equipment</h4>
-                        <p>If you have a nitrogen supply, you're ready. Our Pro Refill Station ($999 partner price) handles the rest.</p>
-                    </div>
-                    <div class="partner-benefit">
-                        <h4>Certified Partner Status</h4>
-                        <p>Get listed on our website, receive marketing materials, and access wholesale pricing.</p>
+
+                    <p class="text-sm text-gray-500">$100 refundable deposit · Production starts if demand validates</p>
+                </div>
+
+                <!-- Right: Product Image -->
+                <div class="relative reveal active lg:ml-auto">
+                    <div class="relative animate-float">
+                        <img src="images/hero-product.jpg" alt="Nimbus ∆P" class="w-full max-w-xl mx-auto drop-shadow-2xl rounded-2xl">
+                        <!-- Ambient glow -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
                     </div>
                 </div>
-                <div class="partners-cta">
-                    <h3>Ideal For</h3>
-                    <ul>
-                        <li>Off-road & 4x4 shops</li>
-                        <li>Suspension specialists</li>
-                        <li>Motorsport service centers</li>
-                        <li>Powersports dealers</li>
-                        <li>Aviation maintenance</li>
-                    </ul>
-                    <div class="partners-math">
-                        <span class="math-label">QUICK MATH</span>
-                        <p>10 refills/week × $24.50 profit</p>
-                        <span class="math-result">$12,740/year</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="relative py-24 border-y border-gray-200" style="background: linear-gradient(to bottom, #ffffff, #fafafa);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div class="text-center reveal">
+                    <div class="text-5xl lg:text-6xl font-black tracking-tight text-black">1,740</div>
+                    <div class="text-xl font-semibold text-gray-600 mt-1">PSI</div>
+                    <div class="text-xs text-gray-400 mt-1">120 bar</div>
+                    <div class="text-sm text-gray-500 mt-3">Max Storage Pressure</div>
+                </div>
+
+                <div class="text-center reveal" style="transition-delay: 0.1s">
+                    <div class="text-5xl lg:text-6xl font-black tracking-tight text-black">1,906</div>
+                    <div class="text-xl font-semibold text-gray-600 mt-1">cu in</div>
+                    <div class="text-xs text-gray-400 mt-1">54 L</div>
+                    <div class="text-sm text-gray-500 mt-3">N₂ Per Cartridge</div>
+                </div>
+
+                <div class="text-center reveal" style="transition-delay: 0.2s">
+                    <div class="text-5xl lg:text-6xl font-black tracking-tight text-black">3.3</div>
+                    <div class="text-xl font-semibold text-gray-600 mt-1">lbs</div>
+                    <div class="text-xs text-gray-400 mt-1">1.5 kg</div>
+                    <div class="text-sm text-gray-500 mt-3">System Weight</div>
+                </div>
+
+                <div class="text-center reveal" style="transition-delay: 0.3s">
+                    <div class="text-5xl lg:text-6xl font-black tracking-tight text-black">2</div>
+                    <div class="text-xl font-semibold text-gray-600 mt-1">Years</div>
+                    <div class="text-sm text-gray-500 mt-3">Warranty</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Left: Content -->
+                <div class="space-y-8 reveal">
+                    <div>
+                        <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Our Story</p>
+                        <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">Built for ourselves, validated by you</h2>
                     </div>
-                    <a href="mailto:partners@nimbus-suspensions.com?subject=∆P Partner Inquiry" class="btn btn-primary btn-block">
-                        APPLY TO BECOME A PARTNER
-                    </a>
+
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>We're Nimbus Suspensions. For years, we've been tuning suspension systems at the highest level. And for years, we've been frustrated by the tools available.</p>
+
+                        <p class="text-black font-medium">Most portable nitrogen systems ship empty. You buy the kit, then hunt for a welding shop willing to fill it before you can even use it.</p>
+
+                        <p>So we built the ∆P (pronounced "Delta-P") for our own workshop. Pre-filled. Ready to use. Powerful enough to handle any suspension system. Light enough to take anywhere.</p>
+
+                        <p>Now we're testing if others want it too. If there's enough demand, we'll produce the first batch. If not, it stays an internal tool.</p>
+                    </div>
+
+                    <div class="pt-4">
+                        <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-dark">
+                            <span class="text-sm text-gray-600">Pronunciation:</span>
+                            <span class="text-sm font-mono text-black font-semibold">DEL-tuh PEE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="relative reveal lg:ml-auto" style="transition-delay: 0.2s">
+                    <div class="relative">
+                        <img src="images/action-garage.jpg" alt="∆P in action" class="w-full rounded-2xl shadow-2xl">
+                        <!-- Ambient glow -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #ffffff, #f9fafb);">
+        <div class="absolute inset-0 gradient-mesh-2"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Applications</p>
+                <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">Who it's for</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">With 1,740 PSI (120 bar) storage pressure and 725 PSI (50 bar) regulated output, the ∆P serves far more than just suspension tuning.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Persona 1 -->
+                <div class="reveal glass-dark rounded-2xl p-8 hover-lift" style="transition-delay: 0.1s">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Off-Road & Overland</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Trail-side suspension adjustments without lugging heavy tanks. Perfect for desert racing, rock crawling, and expedition builds.</p>
+                </div>
+
+                <!-- Persona 2 -->
+                <div class="reveal glass-dark rounded-2xl p-8 hover-lift" style="transition-delay: 0.2s">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Aviation Maintenance</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Service landing gear struts on the tarmac without dragging K-tanks. Light aircraft maintenance (Cirrus, Cessna) made portable.</p>
+                </div>
+
+                <!-- Persona 3 -->
+                <div class="reveal glass-dark rounded-2xl p-8 hover-lift" style="transition-delay: 0.3s">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Industrial Automation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Refill nitrogen die springs and gas struts in heavy machinery and robotics. No compressor needed on site.</p>
+                </div>
+
+                <!-- Persona 4 -->
+                <div class="reveal glass-dark rounded-2xl p-8 hover-lift" style="transition-delay: 0.4s">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Commercial Door Installers</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Counter-balance heavy fire doors and overhead gates on-site. Portable power for commercial installations.</p>
+                </div>
+            </div>
+
+            <!-- Power callout -->
+            <div class="mt-16 text-center reveal" style="transition-delay: 0.5s">
+                <div class="inline-flex items-center space-x-3 px-6 py-4 glass-dark rounded-full">
+                    <span class="text-sm font-mono text-gray-600">Competitors: 500-800 PSI</span>
+                    <span class="text-gray-400">·</span>
+                    <span class="text-sm font-semibold text-black">∆P: 1,740 PSI (120 bar)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology" class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #f9fafb, #ffffff);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Left: Image -->
+                <div class="relative reveal">
+                    <div class="relative">
+                        <img src="images/product-full.jpg" alt="∆P System" class="w-full rounded-2xl shadow-2xl">
+                        <!-- Ambient glow -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="space-y-8 reveal lg:ml-auto" style="transition-delay: 0.2s">
+                    <div>
+                        <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">The Science</p>
+                        <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">Why nitrogen matters</h2>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-black mb-3">Consistent performance</h3>
+                            <p class="text-gray-600 leading-relaxed">Unlike air, nitrogen doesn't contain moisture or oxygen. This means no oxidation, no foaming, and no pressure fluctuations from temperature changes.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold text-black mb-3">Predictable damping</h3>
+                            <p class="text-gray-600 leading-relaxed">Nitrogen's molecular structure provides more stable compression characteristics than air, giving you repeatable, predictable suspension behavior.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold text-black mb-3">Extended component life</h3>
+                            <p class="text-gray-600 leading-relaxed">By eliminating moisture and oxygen, nitrogen prevents internal corrosion and seal degradation, dramatically extending shock service intervals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #ffffff, #fafafa);">
+        <div class="absolute inset-0 gradient-mesh-1"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Gallery</p>
+                <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black">See it in action</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal hover-lift">
+                    <img src="images/gallery-4.jpg" alt="∆P Complete System" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="reveal hover-lift" style="transition-delay: 0.1s">
+                    <img src="images/gallery-1.jpg" alt="∆P Product Shot" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="reveal hover-lift" style="transition-delay: 0.2s">
+                    <img src="images/gallery-5.jpg" alt="∆P Detail View" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="reveal hover-lift" style="transition-delay: 0.3s">
+                    <img src="images/gallery-6.jpg" alt="∆P Gauge Close-up" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="reveal hover-lift" style="transition-delay: 0.4s">
+                    <img src="images/gallery-7.jpg" alt="∆P In Use" class="w-full rounded-2xl shadow-xl">
+                </div>
+                <div class="reveal hover-lift" style="transition-delay: 0.5s">
+                    <img src="images/gallery-8.jpg" alt="∆P Components" class="w-full rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section id="specifications" class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Technical Details</p>
+                <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black">Specifications</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-dark rounded-3xl p-8 lg:p-12 reveal">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Max Storage Pressure</div>
+                                <div class="text-3xl font-bold text-black">1,740 PSI <span class="text-xl text-gray-500">(120 bar)</span></div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Output Pressure</div>
+                                <div class="text-3xl font-bold text-black">0-725 PSI <span class="text-xl text-gray-500">(0-50 bar)</span></div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Nitrogen Capacity</div>
+                                <div class="text-3xl font-bold text-black">1,906 cu in <span class="text-xl text-gray-500">(54 L)</span></div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">System Weight</div>
+                                <div class="text-3xl font-bold text-black">3.3 lbs <span class="text-xl text-gray-500">(1.5 kg)</span></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Gauge Type</div>
+                                <div class="text-3xl font-bold text-black">Analog</div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Hose Length</div>
+                                <div class="text-3xl font-bold text-black">24 inches <span class="text-xl text-gray-500">(61 cm)</span></div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Cartridge Life</div>
+                                <div class="text-3xl font-bold text-black">Refillable</div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-2">Warranty</div>
+                                <div class="text-3xl font-bold text-black">2 Years</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2>FAQ</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Why is the ∆P more expensive than competitors?</h4>
-                    <p>Because it works when it arrives. Competitors ship empty — you pay $699, then spend hours finding a shop to fill it. We ship pre-filled, tested, and ready. The premium buys you convenience and time.</p>
+    <section id="faq" class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #ffffff, #f9fafb);">
+        <div class="absolute inset-0 gradient-mesh-2"></div>
+
+        <div class="relative max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Questions</p>
+                <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black">FAQ</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="reveal glass-dark rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-black mb-3">Does it really ship pre-filled?</h3>
+                    <p class="text-gray-600 leading-relaxed">Yes. Unlike competitors who ship empty tanks, we fill and seal every cartridge at our Florida facility before shipping. Unbox it, thread the cartridge onto the head, and you're ready to tune.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>How do I refill the cartridge?</h4>
-                    <p>We're building a network of certified refill partners across the US. For $30, any partner shop can refill your cartridge while you wait. Partner map launches before first shipments.</p>
+
+                <div class="reveal glass-dark rounded-2xl p-8" style="transition-delay: 0.1s">
+                    <h3 class="text-xl font-bold text-black mb-3">How many fills do I get per cartridge?</h3>
+                    <p class="text-gray-600 leading-relaxed">It depends on your shock volume and target pressure. A typical Fox 2.5 shock (charged to 200 PSI) can be serviced 8-12 times from a single cartridge. Larger reservoir shocks get fewer fills; smaller shocks get more.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>What's the output pressure range?</h4>
-                    <p>0–50 bar (0–725 PSI), adjustable via the precision bleed valve. The gauge shows both bar and PSI scales.</p>
+
+                <div class="reveal glass-dark rounded-2xl p-8" style="transition-delay: 0.2s">
+                    <h3 class="text-xl font-bold text-black mb-3">Can I refill the cartridge myself?</h3>
+                    <p class="text-gray-600 leading-relaxed">Not directly. For safety and certification reasons, cartridges must be refilled using our authorized Refill Station network. We're building a partner network of shops equipped to refill cartridges on-site.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>How many adjustments per cartridge?</h4>
-                    <p>Each cartridge holds ~54 liters of N₂. Depending on shock size and pressure, expect 15-30+ full adjustments per cartridge.</p>
+
+                <div class="reveal glass-dark rounded-2xl p-8" style="transition-delay: 0.3s">
+                    <h3 class="text-xl font-bold text-black mb-3">What if there isn't enough demand?</h3>
+                    <p class="text-gray-600 leading-relaxed">If we don't hit the minimum order threshold, we'll refund every deposit in full. No restocking fees, no questions asked. We only move forward if the numbers make sense.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>Is the deposit refundable?</h4>
-                    <p>Yes, 100% refundable anytime before we ship. Email us and we'll process the refund within 48 hours.</p>
+
+                <div class="reveal glass-dark rounded-2xl p-8" style="transition-delay: 0.4s">
+                    <h3 class="text-xl font-bold text-black mb-3">When do I pay the remaining balance?</h3>
+                    <p class="text-gray-600 leading-relaxed">Only when your kit is ready to ship (estimated Q2 2026). We'll send a secure payment link for the balance. If you change your mind before then, your deposit is fully refundable.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>Why nitrogen instead of air?</h4>
-                    <p>Nitrogen is dry, stable, and inert. Air contains moisture that causes inconsistent damping and corrosion. Every pro race team uses nitrogen.</p>
+
+                <div class="reveal glass-dark rounded-2xl p-8" style="transition-delay: 0.5s">
+                    <h3 class="text-xl font-bold text-black mb-3">What's included in the deposit?</h3>
+                    <p class="text-gray-600 leading-relaxed">The $100 deposit reserves your spot in the production queue and counts toward your final purchase price. It's fully refundable until we send the balance payment request.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>What does the warranty cover?</h4>
-                    <p>2-year warranty covers manufacturing defects in the head unit, gauge, and hose. Cartridges are covered for 1 year.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserve -->
+    <section id="reserve" class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #f9fafb, #ffffff);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-wider mb-4">Get Yours</p>
+                <h2 class="text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">Reserve your spot</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose your kit. $100 refundable deposit. Production starts if demand validates.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Trail Kit -->
+                <div class="reveal glass-dark rounded-3xl p-8 lg:p-10 hover-lift">
+                    <div class="mb-8">
+                        <h3 class="text-3xl font-bold text-black mb-2">Trail Kit</h3>
+                        <p class="text-gray-600">Everything you need to get started</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <span class="text-6xl font-black text-black">$849</span>
+                            <span class="text-gray-500 ml-2">USD</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">$100 deposit today, $749 when ready to ship</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">∆P Head V2</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">Analog Gauge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">24" Braided Hose</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">1x Pre-Filled Cartridge (1,906 cu in / 54L N₂)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">2-Year Warranty</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                        Reserve Trail Kit
+                    </button>
                 </div>
-                <div class="faq-item">
-                    <h4>Do you ship internationally?</h4>
-                    <p>Not yet. Due to Hazmat regulations for pressurized nitrogen, we're US-only initially. International planned for late 2026.</p>
+
+                <!-- Endurance Kit -->
+                <div class="reveal glass-dark rounded-3xl p-8 lg:p-10 hover-lift border-2 border-black/10" style="transition-delay: 0.1s">
+                    <div class="mb-8">
+                        <div class="inline-block px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+                            Most Popular
+                        </div>
+                        <h3 class="text-3xl font-bold text-black mb-2">Endurance Kit</h3>
+                        <p class="text-gray-600">Extra capacity for extended adventures</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <span class="text-6xl font-black text-black">$1,099</span>
+                            <span class="text-gray-500 ml-2">USD</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">$100 deposit today, $999 when ready to ship</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">∆P Head V2</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">Analog Gauge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">24" Braided Hose</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700 font-semibold">2x Pre-Filled Cartridges (3,812 cu in / 108L N₂)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-black mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">2-Year Warranty</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                        Reserve Endurance Kit
+                    </button>
                 </div>
+            </div>
+
+            <div class="text-center mt-12 reveal" style="transition-delay: 0.2s">
+                <p class="text-sm text-gray-500 max-w-2xl mx-auto">
+                    All prices in USD. Deposit is fully refundable until balance payment is requested.
+                    Shipping estimated Q2 2026 if minimum order threshold is met.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>READY TO DITCH THE WELDING SHOP?</h2>
-            <p>Join the first batch of ∆P owners.</p>
-            <a href="#kits" class="btn btn-primary btn-large">RESERVE NOW — $100 DEPOSIT</a>
+    <section class="relative py-32 lg:py-40" style="background: linear-gradient(to bottom, #ffffff, #fafafa);">
+        <div class="absolute inset-0 gradient-mesh-1"></div>
+
+        <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <div class="reveal">
+                <h2 class="text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight text-black mb-6">
+                    Help us validate demand
+                </h2>
+                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    We're testing if the market wants what we built. If you do, reserve your spot. If not, we'll stick to using it ourselves.
+                </p>
+                <a href="#reserve" class="group inline-flex items-center justify-center px-10 py-5 bg-black text-white text-lg font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                    <span>Reserve Your Spot</span>
+                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <p class="text-sm text-gray-500 mt-6">$100 refundable deposit · No commitment until production is confirmed</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="footer-logo">
-                    <p>Palm Beach Gardens, FL</p>
-                </div>
-                <div class="footer-links">
-                    <a href="mailto:delta-p@nimbus-suspensions.com">Contact</a>
-                    <a href="https://nimbus-suspensions.com" target="_blank">Main Site</a>
-                </div>
-            </div>
-            <div class="footer-legal">
-                <p>&copy; 2026 Nimbus Suspensions. All rights reserved.</p>
+    <footer class="relative border-t border-gray-200 py-12" style="background: #fafafa;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="https://nimbus-suspensions.com" target="_blank" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-12 opacity-60 hover:opacity-100 transition-opacity">
+                </a>
+
+                <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
+                    <a href="#story" class="hover:text-black transition-colors">Story</a>
+                    <a href="#technology" class="hover:text-black transition-colors">Technology</a>
+                    <a href="#specifications" class="hover:text-black transition-colors">Specs</a>
+                    <a href="#faq" class="hover:text-black transition-colors">FAQ</a>
+                    <a href="privacy.html" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="terms.html" class="hover:text-black transition-colors">Terms</a>
+                </nav>
+
+                <p class="text-sm text-gray-500">© 2026 Nimbus Suspensions</p>
             </div>
         </div>
     </footer>
 
     <script src="checkout.js"></script>
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('backdrop-blur-xl', 'border-b', 'border-gray-200', 'shadow-sm');
+                header.style.background = 'rgba(250, 250, 250, 0.9)';
+            } else {
+                header.classList.remove('backdrop-blur-xl', 'border-b', 'border-gray-200', 'shadow-sm');
+                header.style.background = 'transparent';
+            }
+        });
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => revealObserver.observe(reveal));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

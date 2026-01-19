@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Program | Nimbus ∆P</title>
+    <meta name="description" content="Become a certified ∆P refill partner. Add a profitable service to your shop with minimal investment and maximum margins.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .partner-hero {
+            padding: 160px 2rem 80px;
+            background: var(--gray-900);
+            text-align: center;
+        }
+        .partner-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .partner-hero p {
+            font-size: 1.2rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .partner-section {
+            padding: var(--space-xl) var(--space-md);
+        }
+        .partner-section:nth-child(odd) {
+            background: var(--black);
+        }
+        .partner-section:nth-child(even) {
+            background: var(--gray-900);
+        }
+
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 12px;
+            padding: var(--space-lg);
+        }
+        .benefit-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .benefit-card h3 span {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        .benefit-card p {
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        .math-section {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .math-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+        .math-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        .math-item {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .math-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .math-label {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            margin-top: 0.5rem;
+        }
+        .math-result {
+            background: linear-gradient(135deg, var(--gray-900) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: var(--space-md);
+        }
+        .math-result-value {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .math-result-label {
+            font-size: 1rem;
+            color: var(--gray-400);
+        }
+
+        .ideal-partners {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .ideal-partners h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+        .ideal-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            list-style: none;
+        }
+        .ideal-list li {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            color: var(--gray-300);
+        }
+
+        .apply-section {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .apply-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .apply-section p {
+            color: var(--gray-400);
+            margin-bottom: var(--space-lg);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .partner-grid, .math-grid, .ideal-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header-scrolled">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="index.html#story">The Story</a>
+                <a href="index.html#technology">Technology</a>
+                <a href="index.html#specifications">Specs</a>
+                <a href="index.html#faq">FAQ</a>
+            </nav>
+            <a href="index.html#reserve" class="btn-header">Reserve Now</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="partner-hero">
+        <span class="section-tag">Partner Program</span>
+        <h1>Become a Certified Refill Partner</h1>
+        <p>Add nitrogen refills to your service menu. Minimal investment, maximum margins, new customers through our partner directory.</p>
+    </section>
+
+    <!-- Benefits -->
+    <section class="partner-section">
+        <div class="partner-grid">
+            <div class="benefit-card">
+                <h3><span>81%</span> Profit Margin</h3>
+                <p>Charge $30 per refill, keep $24.50. If you already have nitrogen on tap, your gas cost is negligible. Pure profit for a 10-minute service.</p>
+            </div>
+            <div class="benefit-card">
+                <h3><span>$999</span> Partner Equipment</h3>
+                <p>Our Pro Refill Station comes at a special partner price. If you have a nitrogen supply, you're ready to go. Quick setup, minimal footprint.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Drive Foot Traffic</h3>
+                <p>Every ∆P owner needs refills eventually. We list your shop on our partner map and send customers your way. New faces walking through your door.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Certified Partner Status</h3>
+                <p>Get listed on our website, receive marketing materials, access wholesale pricing on replacement parts and accessories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Math -->
+    <section class="partner-section">
+        <div class="math-section">
+            <h2>The Math</h2>
+            <div class="math-grid">
+                <div class="math-item">
+                    <div class="math-value">10</div>
+                    <div class="math-label">Refills per week</div>
+                </div>
+                <div class="math-item">
+                    <div class="math-value">×</div>
+                    <div class="math-label">&nbsp;</div>
+                </div>
+                <div class="math-item">
+                    <div class="math-value">$24.50</div>
+                    <div class="math-label">Profit per refill</div>
+                </div>
+            </div>
+            <div class="math-result">
+                <div class="math-result-value">$12,740 / year</div>
+                <div class="math-result-label">Additional revenue from a service that takes 10 minutes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Partners -->
+    <section class="partner-section">
+        <div class="ideal-partners">
+            <h2>Ideal Partner Types</h2>
+            <ul class="ideal-list">
+                <li>Off-road & 4×4 Shops</li>
+                <li>Suspension Specialists</li>
+                <li>Motorsport Service Centers</li>
+                <li>Powersports Dealers</li>
+                <li>Aviation Maintenance Facilities</li>
+                <li>Performance Auto Shops</li>
+                <li>Overlanding Outfitters</li>
+                <li>Mobile Mechanics (with N₂ access)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Apply -->
+    <section class="partner-section">
+        <div class="apply-section">
+            <h2>Ready to Join?</h2>
+            <p>Partner applications are now open. Tell us about your shop, your nitrogen setup, and your service area. We'll be in touch within 48 hours.</p>
+            <a href="mailto:partners@nimbus-suspensions.com?subject=∆P Partner Application" class="btn-primary btn-large">
+                <span>Apply Now</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="https://nimbus-suspensions.com" target="_blank">
+                    <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="footer-logo">
+                </a>
+                <p>Oleo-pneumatic excellence since 2019</p>
+                <p class="footer-location">Palm Beach Gardens, Florida</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="index.html#story">The Story</a>
+                    <a href="index.html#technology">Technology</a>
+                    <a href="index.html#specifications">Specifications</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="https://nimbus-suspensions.com" target="_blank">Main Website</a>
+                    <a href="partners.html">Partner Program</a>
+                    <a href="mailto:delta-p@nimbus-suspensions.com">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nimbus Suspensions. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
