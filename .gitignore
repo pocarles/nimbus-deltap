@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+credentials/
+secrets/
+
+# System
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+dist/
+build/
+.astro/
+*.log
