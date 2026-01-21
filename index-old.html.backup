@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimbus ∆P | Portable Nitrogen System for Suspension Tuning</title>
+    <meta name="description" content="The first portable nitrogen system that ships pre-filled and ready to use. Precision suspension tuning, anywhere. By Nimbus Suspensions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://nimbus-suspensions.com" class="logo" target="_blank" title="Visit Nimbus Suspensions">
+                <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#story">The Story</a>
+                <a href="#technology">Technology</a>
+                <a href="#specifications">Specs</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="#reserve" class="btn-header">Reserve Now</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg-layer"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-intro">Introducing</span>
+                    <span class="hero-title-main">∆P</span>
+                </h1>
+                <p class="hero-subtitle">Portable Nitrogen System for Suspension Tuning</p>
+                <p class="hero-description">
+                    We built this for ourselves. Now we're gauging demand to see if we should produce it for others.
+                    <strong>Pre-filled and ready to use</strong>—shipping Q2 2026 if there's enough interest.
+                </p>
+                <div class="hero-cta">
+                    <a href="#reserve" class="btn-primary">
+                        <span>Reserve Your Spot</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <p class="hero-note">$100 refundable deposit · Production starts if demand validates</p>
+                </div>
+            </div>
+            <div class="hero-product">
+                <img src="images/hero-product.jpg" alt="Nimbus ∆P Nitrogen System">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat-item stat-highlight">
+                <span class="stat-badge">Unmatched Power</span>
+                <span class="stat-value">1,740</span>
+                <span class="stat-unit">PSI</span>
+                <span class="stat-label">Cartridge Storage Pressure</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-value">54</span>
+                <span class="stat-unit">L</span>
+                <span class="stat-label">N₂ Per Cartridge</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-value">1.5</span>
+                <span class="stat-unit">kg</span>
+                <span class="stat-label">System Weight</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-value">2</span>
+                <span class="stat-unit">YR</span>
+                <span class="stat-label">Warranty</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Story -->
+    <section class="story" id="story">
+        <div class="story-content">
+            <span class="section-tag">The Story</span>
+            <h2>Why We Built ∆P</h2>
+            <div class="pronunciation-guide">
+                ∆P <span class="pronunciation-text">(pronounce it <span class="pronunciation-emphasis">DELTA-P</span>)</span>
+            </div>
+            <div class="story-text">
+                <p>At <a href="https://nimbus-suspensions.com" target="_blank">Nimbus Suspensions</a>, we've spent years engineering oleo-pneumatic systems for the most demanding applications. We know nitrogen. We know pressure. We know what happens when gas behavior meets real-world performance.</p>
+
+                <p>∆P—delta-P—is what we call pressure differential. It's the term we use every day at our factory when building and setting up suspensions. We have large nitrogen tanks for production, but when it came to practical, hands-on work, we needed something better. Something portable. Something precise.</p>
+
+                <p>So we designed Nimbus ∆P for ourselves. A compact nitrogen system that's always ready, always reliable. We use it on our build floor. We use it for suspension setup. We use it because nothing beats its practicality and usability—not even our industrial tanks.</p>
+
+                <p>When we looked at the portable nitrogen market, we saw a gap: every system ships empty. You buy it, then you have to figure out how to fill it. That first charge becomes its own project—calling shops, checking availability, waiting for appointments.</p>
+
+                <p>The solution required solving real engineering challenges. Nitrogen at 120 bar is classified as hazardous material. Shipping pre-filled cartridges means DOT compliance, proper certifications, and a distribution network that can handle pressurized goods. It's not simple. That's exactly why no one else does it.</p>
+
+                <p><strong>We love this device so much that we're testing whether there's real demand for it.</strong> If enough people reserve, we'll start a production line and ship in Q2 2026. Your $100 deposit validates market interest—and it's fully refundable if we don't move forward or if you change your mind.</p>
+            </div>
+        </div>
+        <div class="story-image">
+            <img src="images/action-garage.jpg" alt="Using ∆P for suspension tuning">
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="personas">
+        <div class="personas-header">
+            <span class="section-tag">Who It's For</span>
+            <h2>Built for Professionals, Available to All</h2>
+            <p class="section-lead">Whether you're tuning shocks in the desert or servicing aircraft on the tarmac, ∆P stores nitrogen at the highest pressure of any portable system on the market—1,740 PSI of phenomenal capacity.</p>
+        </div>
+        <div class="personas-grid">
+            <div class="persona-card">
+                <div class="persona-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>Off-Road & Overland</h3>
+                <p>Trail runners, rock crawlers, overlanders. Dial in suspension on-site without hauling heavy tanks. Perfect for remote setup and race-day adjustments.</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 8v4l2 2"/>
+                    </svg>
+                </div>
+                <h3>Aviation Maintenance</h3>
+                <p>Service landing gear struts on light aircraft (Cirrus, Cessna) right on the tarmac. No need to drag K-tanks across the hangar.</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M9 9h6v6H9z"/>
+                        <path d="M9 3v6M15 3v6M9 15v6M15 15v6M3 9h6M3 15h6M15 9h6M15 15h6"/>
+                    </svg>
+                </div>
+                <h3>Industrial Automation</h3>
+                <p>Refill nitrogen die springs and gas struts in heavy machinery and robotics. Portable precision for shop floor operations.</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <path d="M4 10h16M10 4v16"/>
+                    </svg>
+                </div>
+                <h3>Commercial Door Installers</h3>
+                <p>Counter-balance heavy fire doors and overhead gates. High-pressure portability for field installations and service calls.</p>
+            </div>
+        </div>
+        <div class="personas-power">
+            <div class="power-highlight">
+                <span class="power-number">1,740</span>
+                <span class="power-unit">PSI</span>
+                <span class="power-label">120 bar</span>
+            </div>
+            <p class="power-text"><strong>The most powerful portable nitrogen system on the market.</strong> While competitors store gas at 500-800 PSI, ∆P cartridges hold nitrogen at an incredible 1,740 PSI (120 bar)—delivering phenomenal capacity in a compact package. Regulated output up to 725 PSI (50 bar) handles the most demanding professional applications.</p>
+        </div>
+    </section>
+
+    <!-- Technology Deep Dive -->
+    <section class="technology" id="technology">
+        <div class="section-header">
+            <span class="section-tag">Technology</span>
+            <h2>The Science of Nitrogen</h2>
+            <p class="section-lead">Why professional racing teams and aerospace engineers choose N₂ over compressed air.</p>
+        </div>
+
+        <div class="tech-deep">
+            <div class="tech-card-large">
+                <div class="tech-card-header">
+                    <h3>Molecular Stability</h3>
+                    <span class="tech-formula">N₂</span>
+                </div>
+                <p>Nitrogen is a diatomic molecule with a triple covalent bond—one of the strongest bonds in chemistry. This makes N₂ remarkably stable and non-reactive under normal conditions. In your shock absorber, this translates to consistent behavior: nitrogen won't oxidize seals, won't react with oil, won't degrade components.</p>
+                <p>The gas constant for nitrogen (R = 296.8 J/kg·K) combined with its specific heat ratio (γ = 1.4) means pressure changes predictably with temperature according to ideal gas law approximations—critical for suspension systems that experience thermal cycling.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Zero Moisture Content</h4>
+                    <p>Industrial nitrogen is delivered at dew points below -40°C. Unlike compressed air (which contains 1-3% water vapor at typical humidity), nitrogen is bone dry. Water in shock absorbers causes cavitation, inconsistent damping, and accelerated seal wear. Dry gas means predictable hydraulics.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Thermal Stability</h4>
+                    <p>Nitrogen's coefficient of thermal expansion is well-characterized: approximately 1/273 per degree Celsius at constant pressure. This predictability means your shock pressure at 6AM (10°C) behaves calculably different from midday (35°C). No surprises, just physics.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Pressure Retention</h4>
+                    <p>N₂ molecules are larger than O₂ and CO₂, reducing permeation through elastomeric seals. Studies show nitrogen-filled systems maintain pressure 3-4× longer than air-filled equivalents. Less frequent recharging, more consistent performance between services.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Inert Behavior</h4>
+                    <p>Nitrogen constitutes 78% of Earth's atmosphere precisely because it's non-reactive. In a sealed shock system, this matters: no oxidation of aluminum components, no chemical interaction with damping fluids, no degradation of O-rings and seals over time.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-callout">
+            <p><strong>Industry Standard:</strong> Formula 1 teams, NASCAR, aerospace landing gear, and professional off-road racing all use nitrogen charging. The physics are clear—when performance and reliability matter, N₂ is the specification.</p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="gallery-header">
+            <span class="section-tag">Product Gallery</span>
+            <h2>See ∆P in Detail</h2>
+            <p>Every component designed for precision and durability</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-large">
+                <img src="images/gallery-1.jpg" alt="∆P Complete System">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-2.jpg" alt="∆P Cartridge and Hose">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-3.jpg" alt="∆P Head Unit Closeup">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-4.jpg" alt="∆P Gauge Detail">
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="specs" id="specifications">
+        <div class="specs-layout">
+            <div class="specs-visual">
+                <div class="specs-product">
+                    <img src="images/product-full.jpg" alt="∆P System Components">
+                </div>
+                <div class="specs-gauge">
+                    <img src="images/gauge-detail.jpg" alt="Precision Gauge Detail">
+                </div>
+            </div>
+            <div class="specs-content">
+                <span class="section-tag">Specifications</span>
+                <h2>Engineering Details</h2>
+                <p class="specs-intro">CNC-machined from 6061-T6 billet aluminum. Every component designed for durability and precision.</p>
+
+                <div class="specs-table">
+                    <div class="spec-row">
+                        <span class="spec-label">Cartridge Storage Pressure</span>
+                        <span class="spec-value">120 bar (1,740 PSI)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Regulated Output Range</span>
+                        <span class="spec-value">0–50 bar (0–725 PSI)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Gas Volume per Cartridge</span>
+                        <span class="spec-value">~54 liters N₂ at STP</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Estimated Shock Charges</span>
+                        <span class="spec-value">15–30+ (varies by shock volume)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Cartridge Dimensions</span>
+                        <span class="spec-value">61mm diameter × 300mm length</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Total System Weight</span>
+                        <span class="spec-value">~1.5 kg (3.3 lbs)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Gauge Standard</span>
+                        <span class="spec-value">EN 837-1, Class 2.5 accuracy</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Gauge Display</span>
+                        <span class="spec-value">Dual-scale (bar + PSI), liquid-filled</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Safety Test Pressure</span>
+                        <span class="spec-value">300 bar (4,350 PSI)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Head Unit Construction</span>
+                        <span class="spec-value">CNC 6061-T6 Billet Aluminum</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Hose Rating</span>
+                        <span class="spec-value">High-pressure braided, 200 bar WP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserve Section -->
+    <section class="reserve" id="reserve">
+        <div class="reserve-header">
+            <span class="section-tag">Reserve Your Spot</span>
+            <h2>Help Us Validate Demand</h2>
+            <p>We built ∆P for ourselves. If there's enough interest, we'll produce it for others.</p>
+            <p class="reserve-batch">$100 refundable deposit · Production starts Q2 2026 if demand validates · Limited to 100 units in first batch</p>
+        </div>
+
+        <div class="kits-grid">
+            <div class="kit-card">
+                <div class="kit-header">
+                    <span class="kit-name">Standard Kit</span>
+                    <div class="kit-price">
+                        <span class="price-amount">$849</span>
+                        <span class="price-note">total price</span>
+                    </div>
+                </div>
+                <div class="kit-highlight">
+                    <span class="highlight-icon">1×</span>
+                    <span class="highlight-text">Pre-filled Cartridge</span>
+                </div>
+                <ul class="kit-contents">
+                    <li>Head Unit V2 (CNC Aluminum)</li>
+                    <li>Precision Analog Gauge (0-50 bar)</li>
+                    <li>High-pressure Hose Assembly</li>
+                    <li>Protective Carry Case</li>
+                    <li>Quick-start Guide</li>
+                </ul>
+                <p class="kit-ideal">Ideal for personal use and occasional tuning sessions</p>
+                <button class="btn-kit" data-product="standard">
+                    Reserve — $100 Deposit
+                </button>
+            </div>
+
+            <div class="kit-card kit-featured">
+                <div class="kit-badge">Most Popular</div>
+                <div class="kit-header">
+                    <span class="kit-name">Extended Kit</span>
+                    <div class="kit-price">
+                        <span class="price-amount">$1,099</span>
+                        <span class="price-note">total price</span>
+                    </div>
+                </div>
+                <div class="kit-highlight kit-highlight-featured">
+                    <span class="highlight-icon">2×</span>
+                    <span class="highlight-text">Pre-filled Cartridges</span>
+                    <span class="highlight-bonus">Double the capacity!</span>
+                </div>
+                <ul class="kit-contents">
+                    <li>Head Unit V2 (CNC Aluminum)</li>
+                    <li>Precision Analog Gauge (0-50 bar)</li>
+                    <li>High-pressure Hose Assembly</li>
+                    <li>Protective Carry Case</li>
+                    <li>Quick-start Guide</li>
+                </ul>
+                <p class="kit-ideal">Perfect for multi-vehicle households, shops, or remote expeditions</p>
+                <button class="btn-kit btn-kit-featured" data-product="extended">
+                    Reserve — $100 Deposit
+                </button>
+            </div>
+        </div>
+
+        <div class="reserve-info">
+            <div class="info-item">
+                <strong>100% Refundable</strong>
+                <span>Full refund if we don't produce or if you change your mind before shipping.</span>
+            </div>
+            <div class="info-item">
+                <strong>Conditional Production</strong>
+                <span>We only start production if enough reservations validate demand. Q2 2026 target.</span>
+            </div>
+            <div class="info-item">
+                <strong>US Only (Initially)</strong>
+                <span>Hazmat shipping regulations limit us to continental US for first batch.</span>
+            </div>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Secure checkout via Stripe</span>
+            </div>
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <path d="M22 4 12 14.01l-3-3"/>
+                </svg>
+                <span>Backed by Nimbus Suspensions</span>
+            </div>
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <span>Engineering since 2019</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="faq-header">
+            <span class="section-tag">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>Why nitrogen instead of compressed air?</h4>
+                <p>Three reasons: dryness, stability, and inertness. Compressed air contains water vapor (typically 1-3% at normal humidity) which causes inconsistent damping and seal degradation. Nitrogen is delivered at dew points below -40°C—essentially zero moisture. Additionally, N₂ molecules are larger than O₂, reducing permeation through elastomeric seals by 3-4×. Finally, nitrogen is chemically inert, preventing oxidation of aluminum components and degradation of damping fluids.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How many shock charges per cartridge?</h4>
+                <p>Each cartridge contains approximately 54 liters of N₂ at standard temperature and pressure (STP). A typical shock absorber requires 50-200ml of gas depending on reservoir size and desired pressure. At 150 PSI (10.3 bar), you can expect 15-30+ full charges per cartridge. Larger reservoir shocks or higher pressures will use more gas per charge; smaller shocks or lower pressures will extend cartridge life.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What's the science behind the 120 bar storage pressure?</h4>
+                <p>The cartridge stores nitrogen at 120 bar (~1,740 PSI) to maximize portable capacity. This pressure is well within the elastic deformation range of the steel cylinder (tested to 300 bar / 4,350 PSI for safety margin). The regulator then steps down pressure to your desired output (0-50 bar). This high-to-low regulation approach ensures stable output pressure even as the cartridge depletes—you get consistent performance from first charge to last.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How does temperature affect nitrogen pressure?</h4>
+                <p>Per the ideal gas law (PV = nRT), pressure varies linearly with absolute temperature at constant volume. For nitrogen with γ = 1.4, expect roughly 0.6% pressure change per °C. A shock set to 150 PSI at 20°C will read approximately 156 PSI at 30°C. This predictability is why nitrogen is preferred—the math is clean, and you can compensate accordingly. Always set pressure with the shock at operating temperature.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Why is the EN 837-1 gauge standard important?</h4>
+                <p>EN 837-1 is the European standard for Bourdon tube pressure gauges, specifying accuracy classes from 0.1 to 4.0. Our Class 2.5 gauge guarantees accuracy within ±2.5% of full scale—meaning at any reading, you're within ±1.25 bar (±18 PSI) of true pressure. The liquid-filled design (glycerin) dampens needle vibration for stable readings even in harsh conditions. This is the same spec used in industrial and aerospace applications where precision matters.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What shock types is ∆P compatible with?</h4>
+                <p>∆P works with any shock absorber that has a Schrader valve (standard automotive/bicycle valve) for nitrogen charging. This includes most aftermarket performance shocks: Fox, King, Icon, Bilstein, Old Man Emu, Rancho, and others. If your shock has a charging port with a Schrader valve core, ∆P can service it. For shocks with proprietary filling systems, check with your shock manufacturer.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How do I refill the cartridge when it's empty?</h4>
+                <p>We're building a network of certified refill partners across the US—shops that already have nitrogen supplies and can refill your cartridge while you wait. Expected refill cost: ~$30. Our partner map launches before first shipments. Alternatively, cartridges can be sent to us for exchange (shipping both ways on you). We're also exploring a mail-back refill program for remote customers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is the deposit fully refundable?</h4>
+                <p>Yes, 100%. If you change your mind at any point before we ship your kit, email us and we'll process a full refund within 48 hours. No questions, no hassle. We'd rather have happy customers who want the product than reluctant ones who felt locked in.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Why is ∆P priced higher than some alternatives?</h4>
+                <p>Because it works the day it arrives. Other systems ship empty—you pay the sticker price, then spend time and money getting that first fill. We ship pre-charged with certified nitrogen, ready to use immediately. The price includes the convenience, the certification, the hazmat-compliant shipping, and the peace of mind that it's done right. We've done the hard part so you don't have to.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What's included in the 2-year warranty?</h4>
+                <p>The warranty covers manufacturing defects in the head unit, gauge, and hose assembly. If something fails due to workmanship or materials under normal use, we'll repair or replace it. Cartridges carry a 1-year warranty. Normal wear, user damage, and improper use aren't covered. We stand behind our engineering—if it breaks and it shouldn't have, we'll make it right.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I fly with ∆P?</h4>
+                <p>No. Pressurized nitrogen cartridges are classified as hazardous materials and cannot be transported on commercial aircraft (FAA/IATA regulations). ∆P is designed for vehicle transport—keep it in your truck, trailer, or garage. For destination-based trips where you're flying, you'd need to source local nitrogen or use a refill partner at your destination.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you ship internationally?</h4>
+                <p>Not yet. Hazmat regulations for pressurized nitrogen vary significantly by country, and the compliance burden for international shipping is substantial. We're launching US-only (continental 48 states) to start. International shipping is on our roadmap for late 2026 as we establish compliant logistics channels. If you're outside the US, join our email list and we'll notify you when we expand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-content">
+            <a href="https://nimbus-suspensions.com" target="_blank" class="final-brand">
+                <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions">
+                <span>nimbus-suspensions.com</span>
+            </a>
+            <h2>Help us validate demand</h2>
+            <p>Your reservation tells us there's real interest. We'll only produce if enough people want it.</p>
+            <a href="#reserve" class="btn-primary btn-large">
+                <span>Reserve Your Spot</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <span class="final-note">$100 refundable deposit · Production starts Q2 2026 if validated</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="https://nimbus-suspensions.com" target="_blank">
+                    <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="footer-logo">
+                </a>
+                <p>Oleo-pneumatic excellence since 2019</p>
+                <p class="footer-location">Palm Beach Gardens, Florida</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#story">The Story</a>
+                    <a href="#technology">Technology</a>
+                    <a href="#specifications">Specifications</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="https://nimbus-suspensions.com" target="_blank">Main Website</a>
+                    <a href="partners.html">Partner Program</a>
+                    <a href="mailto:delta-p@nimbus-suspensions.com">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nimbus Suspensions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Animate on scroll
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.tech-card, .tech-card-large, .kit-card, .faq-item, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

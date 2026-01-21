@@ -8,28 +8,32 @@
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-// Product configuration
+// Product configuration (Early Bird: 28% off for first 100)
 const PRODUCTS = {
     standard: {
-        name: 'Nimbus ∆P Standard Kit — $100 Deposit',
-        description: 'Reserve your ∆P Standard Kit ($849 total). $100 deposit today, $749 + shipping due before shipment.',
+        name: 'Nimbus ∆P Range Kit — $100 Deposit (Early Bird)',
+        description: 'Reserve your ∆P Range Kit at 28% off ($611 total, reg. $849). $100 deposit today, $511 + shipping due before shipment.',
         amount: 10000, // $100.00 in cents
-        fullPrice: 849,
+        fullPrice: 611,
         metadata: {
-            product_type: 'standard_kit',
-            full_price: '849',
-            balance_due: '749'
+            product_type: 'range_kit',
+            full_price: '611',
+            regular_price: '849',
+            balance_due: '511',
+            discount: '28_percent_early_bird'
         }
     },
     extended: {
-        name: 'Nimbus ∆P Extended Kit — $100 Deposit',
-        description: 'Reserve your ∆P Extended Kit ($1,099 total). $100 deposit today, $999 + shipping due before shipment.',
+        name: 'Nimbus ∆P Extended Range Kit — $100 Deposit (Early Bird)',
+        description: 'Reserve your ∆P Extended Range Kit at 28% off ($791 total, reg. $1,099). $100 deposit today, $691 + shipping due before shipment.',
         amount: 10000, // $100.00 in cents
-        fullPrice: 1099,
+        fullPrice: 791,
         metadata: {
-            product_type: 'extended_kit',
-            full_price: '1099',
-            balance_due: '999'
+            product_type: 'extended_range_kit',
+            full_price: '791',
+            regular_price: '1099',
+            balance_due: '691',
+            discount: '28_percent_early_bird'
         }
     }
 };
@@ -113,7 +117,7 @@ module.exports = async (req, res) => {
         console.error('Stripe error:', error);
         res.status(500).json({
             error: 'Failed to create checkout session',
-            details: process.env.NODE_ENV === 'development' ? error.message : undefined
+            details: error.message
         });
     }
 };

@@ -4,309 +4,375 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partner Program | Nimbus ∆P</title>
-    <meta name="description" content="Become a certified ∆P refill partner. Add a profitable service to your shop with minimal investment and maximum margins.">
+    <meta name="description" content="Become a certified ∆P refill partner. Add a profitable high-pressure nitrogen service to your shop with 81% margins.">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .partner-hero {
-            padding: 160px 2rem 80px;
-            background: var(--gray-900);
-            text-align: center;
-        }
-        .partner-hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .partner-hero p {
-            font-size: 1.2rem;
-            color: var(--gray-400);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .partner-section {
-            padding: var(--space-xl) var(--space-md);
-        }
-        .partner-section:nth-child(odd) {
-            background: var(--black);
-        }
-        .partner-section:nth-child(even) {
-            background: var(--gray-900);
-        }
-
-        .partner-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-lg);
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .benefit-card {
-            background: var(--gray-800);
-            border: 1px solid var(--gray-700);
-            border-radius: 12px;
-            padding: var(--space-lg);
-        }
-        .benefit-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .benefit-card h3 span {
-            font-family: var(--font-mono);
-            font-size: 2rem;
-            color: var(--accent);
-        }
-        .benefit-card p {
-            color: var(--gray-400);
-            line-height: 1.7;
-        }
-
-        .math-section {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .math-section h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-        }
-        .math-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-        }
-        .math-item {
-            background: var(--gray-800);
-            border: 1px solid var(--gray-700);
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-        .math-value {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-        }
-        .math-label {
-            font-size: 0.9rem;
-            color: var(--gray-500);
-            margin-top: 0.5rem;
-        }
-        .math-result {
-            background: linear-gradient(135deg, var(--gray-900) 0%, rgba(59, 130, 246, 0.1) 100%);
-            border: 2px solid var(--accent);
-            border-radius: 12px;
-            padding: var(--space-md);
-        }
-        .math-result-value {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        .math-result-label {
-            font-size: 1rem;
-            color: var(--gray-400);
-        }
-
-        .ideal-partners {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .ideal-partners h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            text-align: center;
-        }
-        .ideal-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            list-style: none;
-        }
-        .ideal-list li {
-            background: var(--gray-800);
-            border: 1px solid var(--gray-700);
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-            color: var(--gray-300);
-        }
-
-        .apply-section {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .apply-section h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .apply-section p {
-            color: var(--gray-400);
-            margin-bottom: var(--space-lg);
-            line-height: 1.7;
-        }
-
-        @media (max-width: 768px) {
-            .partner-grid, .math-grid, .ideal-list {
-                grid-template-columns: 1fr;
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
             }
         }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .accent { color: #B5886A; }
+        .accent-bg { background-color: #B5886A; }
     </style>
 </head>
-<body>
+<body class="text-gray-900 antialiased" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+
     <!-- Header -->
-    <header class="header header-scrolled">
-        <div class="header-inner">
-            <a href="index.html" class="logo">
-                <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="logo-img">
-            </a>
-            <nav class="nav">
-                <a href="index.html#story">The Story</a>
-                <a href="index.html#technology">Technology</a>
-                <a href="index.html#specifications">Specs</a>
-                <a href="index.html#faq">FAQ</a>
-            </nav>
-            <a href="index.html#reserve" class="btn-header">Reserve Now</a>
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-gray-200" style="background: rgba(250, 250, 250, 0.9);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-12 lg:h-16">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
+                    <a href="index.html#technology" class="text-gray-600 hover:text-black transition-colors">Technology</a>
+                    <a href="index.html#specifications" class="text-gray-600 hover:text-black transition-colors">Specs</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-black transition-colors">FAQ</a>
+                    <a href="partners.html" class="text-gray-600 hover:text-black transition-colors">Partners</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-black transition-colors">Contact</a>
+                </nav>
+                <a href="index.html#reserve" class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition-all duration-300">
+                    Reserve Now
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="partner-hero">
-        <span class="section-tag">Partner Program</span>
-        <h1>Become a Certified Refill Partner</h1>
-        <p>Add nitrogen refills to your service menu. Minimal investment, maximum margins, new customers through our partner directory.</p>
+    <section class="relative pt-32 pb-16" style="background: linear-gradient(135deg, #fafafa 0%, #ffffff 50%, #f9fafb 100%);">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <p class="text-sm font-mono uppercase tracking-wider mb-3 accent">Partner Program</p>
+            <h1 class="text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">
+                Be First to Offer High-Pressure Nitrogen Refills
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                The ∆P is the only portable nitrogen system that ships pre-filled. When your customers need refills,
+                they'll need a certified partner. That could be you.
+            </p>
+        </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="partner-section">
-        <div class="partner-grid">
-            <div class="benefit-card">
-                <h3><span>81%</span> Profit Margin</h3>
-                <p>Charge $30 per refill, keep $24.50. If you already have nitrogen on tap, your gas cost is negligible. Pure profit for a 10-minute service.</p>
+    <!-- The Opportunity -->
+    <section class="py-20" style="background: linear-gradient(to bottom, #ffffff, #fafafa);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">The Opportunity</p>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-tight text-black mb-6">81% margin on every refill</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A 10-minute service that keeps customers coming back. No complex equipment. No certification hassles.</p>
             </div>
-            <div class="benefit-card">
-                <h3><span>$999</span> Partner Equipment</h3>
-                <p>Our Pro Refill Station comes at a special partner price. If you have a nitrogen supply, you're ready to go. Quick setup, minimal footprint.</p>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                <div class="text-center glass-dark rounded-2xl p-8">
+                    <div class="text-5xl font-black accent mb-2">$30</div>
+                    <div class="text-gray-500">Customer pays</div>
+                </div>
+                <div class="text-center glass-dark rounded-2xl p-8">
+                    <div class="text-5xl font-black text-black mb-2">$5.50</div>
+                    <div class="text-gray-500">Your cost (seal + gas)</div>
+                </div>
+                <div class="text-center glass-dark rounded-2xl p-8">
+                    <div class="text-5xl font-black text-green-600 mb-2">$24.50</div>
+                    <div class="text-gray-500">Your profit</div>
+                </div>
             </div>
-            <div class="benefit-card">
-                <h3>Drive Foot Traffic</h3>
-                <p>Every ∆P owner needs refills eventually. We list your shop on our partner map and send customers your way. New faces walking through your door.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>Certified Partner Status</h3>
-                <p>Get listed on our website, receive marketing materials, access wholesale pricing on replacement parts and accessories.</p>
+
+            <div class="max-w-2xl mx-auto glass-dark rounded-3xl p-8 text-center">
+                <p class="text-gray-600 mb-4">At just 10 refills per week:</p>
+                <div class="text-4xl font-black text-black mb-2">$12,740 / year</div>
+                <p class="text-gray-500">Additional revenue from a service that takes 10 minutes</p>
             </div>
         </div>
     </section>
 
-    <!-- The Math -->
-    <section class="partner-section">
-        <div class="math-section">
-            <h2>The Math</h2>
-            <div class="math-grid">
-                <div class="math-item">
-                    <div class="math-value">10</div>
-                    <div class="math-label">Refills per week</div>
-                </div>
-                <div class="math-item">
-                    <div class="math-value">×</div>
-                    <div class="math-label">&nbsp;</div>
-                </div>
-                <div class="math-item">
-                    <div class="math-value">$24.50</div>
-                    <div class="math-label">Profit per refill</div>
-                </div>
+    <!-- How It Works -->
+    <section class="py-20" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">How It Works</p>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-tight text-black">The Hologram Seal System</h2>
             </div>
-            <div class="math-result">
-                <div class="math-result-value">$12,740 / year</div>
-                <div class="math-result-label">Additional revenue from a service that takes 10 minutes</div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full accent-bg text-white flex items-center justify-center font-bold">1</div>
+                        <div>
+                            <h3 class="font-bold text-black mb-1">Buy Refill Packs</h3>
+                            <p class="text-gray-600">$250 for 50 serialized hologram seals. That's your only ongoing cost ($5 per refill).</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full accent-bg text-white flex items-center justify-center font-bold">2</div>
+                        <div>
+                            <h3 class="font-bold text-black mb-1">Refill with your nitrogen</h3>
+                            <p class="text-gray-600">If you have a nitrogen tank (most shops do), connect to our charging ramp and fill to 120 bar.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full accent-bg text-white flex items-center justify-center font-bold">3</div>
+                        <div>
+                            <h3 class="font-bold text-black mb-1">Apply the seal</h3>
+                            <p class="text-gray-600">The hologram seal validates the refill. No metering, no tracking systems. Simple and tamper-evident.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full accent-bg text-white flex items-center justify-center font-bold">4</div>
+                        <div>
+                            <h3 class="font-bold text-black mb-1">Charge $30, keep $24.50</h3>
+                            <p class="text-gray-600">Customers get their cartridge back same-day. You get a happy customer and strong margins.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-dark rounded-3xl p-8">
+                    <h3 class="text-xl font-bold text-black mb-4">Partner Starter Kit</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Pro Refill Station (charging ramp)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">50 hologram seals (first pack included)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Partner directory listing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span class="text-gray-700">Marketing materials & signage</span>
+                        </li>
+                    </ul>
+                    <div class="border-t border-gray-200 pt-6">
+                        <div class="text-3xl font-black text-black mb-1">$999</div>
+                        <p class="text-sm text-gray-500">Partner wholesale price (retail $1,499)</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Ideal Partners -->
-    <section class="partner-section">
-        <div class="ideal-partners">
-            <h2>Ideal Partner Types</h2>
-            <ul class="ideal-list">
-                <li>Off-road & 4×4 Shops</li>
-                <li>Suspension Specialists</li>
-                <li>Motorsport Service Centers</li>
-                <li>Powersports Dealers</li>
-                <li>Aviation Maintenance Facilities</li>
-                <li>Performance Auto Shops</li>
-                <li>Overlanding Outfitters</li>
-                <li>Mobile Mechanics (with N₂ access)</li>
-            </ul>
+    <section class="py-20" style="background: linear-gradient(to bottom, #ffffff, #fafafa);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">Who We're Looking For</p>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-tight text-black">Ideal Partner Types</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-black mb-2">Off-Road & 4×4 Shops</h3>
+                    <p class="text-sm text-gray-600">Your customers already understand nitrogen. Give them a place to refill.</p>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-black mb-2">Aviation Maintenance</h3>
+                    <p class="text-sm text-gray-600">Strut servicing for light aircraft. A niche market with real demand.</p>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-black mb-2">Industrial Automation</h3>
+                    <p class="text-sm text-gray-600">Die springs, gas struts, machinery. Wherever nitrogen is used.</p>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                    <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-black mb-2">Commercial Door Service</h3>
+                    <p class="text-sm text-gray-600">Fire doors, overhead gates, heavy-duty closers. On-site portable fills.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Apply -->
-    <section class="partner-section">
-        <div class="apply-section">
-            <h2>Ready to Join?</h2>
-            <p>Partner applications are now open. Tell us about your shop, your nitrogen setup, and your service area. We'll be in touch within 48 hours.</p>
-            <a href="mailto:partners@nimbus-suspensions.com?subject=∆P Partner Application" class="btn-primary btn-large">
-                <span>Apply Now</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-            </a>
+    <!-- Contact Form -->
+    <section class="py-20" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">Apply Now</p>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-tight text-black mb-4">Interested in becoming a partner?</h2>
+                <p class="text-xl text-gray-600">Tell us about your business. We'll be in touch within 48 hours.</p>
+            </div>
+
+            <form id="partner-form" class="glass-dark rounded-3xl p-8 lg:p-10">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Your Name *</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Business Name *</label>
+                        <input type="text" name="business" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                        <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">State *</label>
+                    <input type="text" name="state" required placeholder="e.g., Florida, TX, California" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Business Type *</label>
+                    <select name="business_type" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                        <option value="">Select your business type</option>
+                        <option value="offroad">Off-Road / 4×4 Shop</option>
+                        <option value="suspension">Suspension Specialist</option>
+                        <option value="motorsport">Motorsport Service Center</option>
+                        <option value="aviation">Aviation Maintenance</option>
+                        <option value="industrial">Industrial / Manufacturing</option>
+                        <option value="commercial">Commercial Door Service</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Do you currently have a nitrogen supply?</label>
+                    <select name="nitrogen_supply" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes, we have nitrogen on-site</option>
+                        <option value="no">No, but we can source it</option>
+                        <option value="unsure">Not sure</option>
+                    </select>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Tell us about your business</label>
+                    <textarea name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all" placeholder="Location, services you offer, why you're interested in the ∆P partner program..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                    Submit Application
+                </button>
+                <p id="form-status" class="text-center text-sm text-gray-500 mt-4">We'll respond within 48 hours</p>
+            </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('partner-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
+            const form = e.target;
+
+            // Disable button and show loading
+            btn.disabled = true;
+            btn.textContent = 'Submitting...';
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                business: formData.get('business'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || '',
+                state: formData.get('state'),
+                business_type: formData.get('business_type'),
+                nitrogen_supply: formData.get('nitrogen_supply') || '',
+                message: formData.get('message') || ''
+            };
+
+            try {
+                const response = await fetch('https://workflows-api.softr.io/v1/workflows/77c325dc-b451-420c-ae41-9330e58b1d5d/executions/1d5269c2-c615-4e81-89e1-eaadd631be2a', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    // Success
+                    status.textContent = '✓ Application submitted! We\'ll be in touch within 48 hours.';
+                    status.classList.remove('text-gray-500');
+                    status.classList.add('text-green-600', 'font-medium');
+                    form.reset();
+                    btn.textContent = 'Submitted!';
+                    btn.classList.remove('bg-black', 'hover:bg-gray-800');
+                    btn.classList.add('bg-green-600');
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                // Error
+                status.textContent = 'Something went wrong. Please email us at partners@nimbus-suspensions.com';
+                status.classList.remove('text-gray-500');
+                status.classList.add('text-red-600');
+                btn.disabled = false;
+                btn.textContent = 'Submit Application';
+                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+    </script>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <a href="https://nimbus-suspensions.com" target="_blank">
-                    <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="footer-logo">
+    <footer class="relative border-t border-gray-200 py-10" style="background: #fafafa;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="https://nimbus-suspensions.com" target="_blank" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-12 opacity-60 hover:opacity-100 transition-opacity">
                 </a>
-                <p>Oleo-pneumatic excellence since 2019</p>
-                <p class="footer-location">Palm Beach Gardens, Florida</p>
+                <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
+                    <a href="index.html" class="hover:text-black transition-colors">Home</a>
+                    <a href="index.html#story" class="hover:text-black transition-colors">Story</a>
+                    <a href="index.html#faq" class="hover:text-black transition-colors">FAQ</a>
+                    <a href="partners.html" class="hover:text-black transition-colors">Partners</a>
+                    <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
+                    <a href="privacy.html" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="terms.html" class="hover:text-black transition-colors">Terms</a>
+                </nav>
+                <p class="text-sm text-gray-500">© 2026 Nimbus Suspensions</p>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="index.html#story">The Story</a>
-                    <a href="index.html#technology">Technology</a>
-                    <a href="index.html#specifications">Specifications</a>
-                    <a href="index.html#faq">FAQ</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="https://nimbus-suspensions.com" target="_blank">Main Website</a>
-                    <a href="partners.html">Partner Program</a>
-                    <a href="mailto:delta-p@nimbus-suspensions.com">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Sale</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Nimbus Suspensions. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>

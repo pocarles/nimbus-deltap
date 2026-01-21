@@ -5,202 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Sale | Nimbus ∆P</title>
     <meta name="description" content="Terms and conditions for Nimbus ∆P pre-orders and purchases.">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .legal-page {
-            padding: 160px 2rem 80px;
-            max-width: 800px;
-            margin: 0 auto;
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
         }
-        .legal-page h1 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .legal-date {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--gray-500);
-            margin-bottom: var(--space-xl);
-        }
-        .legal-page h2 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: var(--space-lg);
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-        .legal-page p, .legal-page li {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
-        }
-        .legal-page ul, .legal-page ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .legal-page a {
-            color: var(--accent);
-        }
-        .legal-page a:hover {
-            text-decoration: underline;
-        }
-        .legal-page strong {
-            color: var(--gray-300);
-        }
+        .accent { color: #B5886A; }
     </style>
 </head>
-<body>
+<body class="text-gray-900 antialiased" style="background: linear-gradient(to bottom, #fafafa, #ffffff);">
+
     <!-- Header -->
-    <header class="header header-scrolled">
-        <div class="header-inner">
-            <a href="index.html" class="logo">
-                <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="logo-img">
-            </a>
-            <nav class="nav">
-                <a href="index.html#story">The Story</a>
-                <a href="index.html#technology">Technology</a>
-                <a href="index.html#specifications">Specs</a>
-                <a href="index.html#faq">FAQ</a>
-            </nav>
-            <a href="index.html#reserve" class="btn-header">Reserve Now</a>
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-gray-200" style="background: rgba(250, 250, 250, 0.9);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-5">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-12 lg:h-16">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
+                    <a href="index.html#technology" class="text-gray-600 hover:text-black transition-colors">Technology</a>
+                    <a href="index.html#specifications" class="text-gray-600 hover:text-black transition-colors">Specs</a>
+                    <a href="index.html#faq" class="text-gray-600 hover:text-black transition-colors">FAQ</a>
+                    <a href="partners.html" class="text-gray-600 hover:text-black transition-colors">Partners</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-black transition-colors">Contact</a>
+                </nav>
+                <a href="index.html#reserve" class="px-6 py-3 bg-black text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition-all duration-300">
+                    Reserve Now
+                </a>
+            </div>
         </div>
     </header>
 
-    <main class="legal-page">
-        <h1>Terms of Sale</h1>
-        <p class="legal-date">Last updated: January 18, 2026</p>
+    <!-- Content -->
+    <main class="pt-32 pb-16">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">Legal</p>
+            <h1 class="text-4xl lg:text-5xl font-black tracking-tight text-black mb-4">Terms of Sale</h1>
+            <p class="text-sm text-gray-500 mb-10">Last updated: January 18, 2026</p>
 
-        <p>These Terms of Sale ("Terms") govern your purchase of ∆P products from Nimbus Suspensions ("we," "our," or "us"). By placing an order, you agree to these Terms.</p>
+            <div class="prose prose-gray max-w-none">
+                <p class="text-gray-600 leading-relaxed mb-8">These Terms of Sale ("Terms") govern your purchase of ∆P products from Nimbus Suspensions ("we," "our," or "us"). By placing an order, you agree to these Terms.</p>
 
-        <h2>1. Pre-Order Terms</h2>
-        <p>∆P products are currently available for pre-order. By placing a pre-order, you agree to the following:</p>
-        <ul>
-            <li><strong>Deposit:</strong> A $100 USD deposit is required to reserve your position in the production queue.</li>
-            <li><strong>Estimated Shipping:</strong> Current estimate is Q2 2026. This is an estimate and may change based on production timelines.</li>
-            <li><strong>Balance Due:</strong> The remaining balance (product price minus deposit, plus applicable shipping) will be collected before shipment via a secure payment link.</li>
-            <li><strong>Refundable Deposit:</strong> Your deposit is 100% refundable at any time before we ship your order. Email us to request a refund.</li>
-        </ul>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">1. Pre-Order Terms</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">∆P products are currently available for pre-order. By placing a pre-order, you agree to the following:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li><strong class="text-gray-800">Deposit:</strong> A $100 USD deposit is required to reserve your position in the production queue.</li>
+                    <li><strong class="text-gray-800">Estimated Shipping:</strong> Current estimate is Q2 2026. This is an estimate and may change based on production timelines.</li>
+                    <li><strong class="text-gray-800">Balance Due:</strong> The remaining balance (product price minus deposit, plus applicable shipping) will be collected before shipment via a secure payment link.</li>
+                    <li><strong class="text-gray-800">Refundable Deposit:</strong> Your deposit is 100% refundable at any time before we ship your order. Email us to request a refund.</li>
+                </ul>
 
-        <h2>2. Pricing</h2>
-        <p>Current pricing (subject to change before final order):</p>
-        <ul>
-            <li><strong>Standard Kit:</strong> $849 USD (includes 1 pre-filled cartridge)</li>
-            <li><strong>Extended Kit:</strong> $1,099 USD (includes 2 pre-filled cartridges)</li>
-        </ul>
-        <p>Prices do not include shipping. Shipping costs will be calculated based on your delivery address and added to your balance due.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">2. Pricing</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Current pricing (subject to change before final order):</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li><strong class="text-gray-800">Standard Kit:</strong> $849 USD (includes 1 pre-filled cartridge)</li>
+                    <li><strong class="text-gray-800">Extended Kit:</strong> $1,099 USD (includes 2 pre-filled cartridges)</li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-6">Prices do not include shipping. Shipping costs will be calculated based on your delivery address and added to your balance due.</p>
 
-        <h2>3. Payment</h2>
-        <p>We accept major credit cards through our payment processor, Stripe. All payments are processed in US Dollars (USD). By providing payment information, you represent that you are authorized to use the payment method.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">3. Payment</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">We accept major credit cards through our payment processor, Stripe. All payments are processed in US Dollars (USD). By providing payment information, you represent that you are authorized to use the payment method.</p>
 
-        <h2>4. Shipping</h2>
-        <ul>
-            <li><strong>Territory:</strong> We currently ship to the continental United States (48 states) only. Due to Hazmat regulations for pressurized nitrogen, we cannot ship to Alaska, Hawaii, US territories, or international destinations at this time.</li>
-            <li><strong>Carrier:</strong> Orders will be shipped via a carrier certified for hazardous materials transport.</li>
-            <li><strong>Timeframe:</strong> Once your balance is paid, orders typically ship within 3-5 business days.</li>
-            <li><strong>Risk of Loss:</strong> Risk of loss passes to you upon delivery to the carrier.</li>
-        </ul>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">4. Shipping</h2>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li><strong class="text-gray-800">Territory:</strong> We currently ship to the continental United States (48 states) only. Due to Hazmat regulations for pressurized nitrogen, we cannot ship to Alaska, Hawaii, US territories, or international destinations at this time.</li>
+                    <li><strong class="text-gray-800">Carrier:</strong> Orders will be shipped via a carrier certified for hazardous materials transport.</li>
+                    <li><strong class="text-gray-800">Timeframe:</strong> Once your balance is paid, orders typically ship within 3-5 business days.</li>
+                    <li><strong class="text-gray-800">Risk of Loss:</strong> Risk of loss passes to you upon delivery to the carrier.</li>
+                </ul>
 
-        <h2>5. Hazardous Materials Notice</h2>
-        <p>∆P cartridges contain pressurized nitrogen gas, classified as a hazardous material for shipping purposes. By ordering, you acknowledge:</p>
-        <ul>
-            <li>You will not transport cartridges via commercial aircraft</li>
-            <li>You will store and handle cartridges according to the included safety guidelines</li>
-            <li>You are at least 18 years of age</li>
-        </ul>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">5. Hazardous Materials Notice</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">∆P cartridges contain pressurized nitrogen gas, classified as a hazardous material for shipping purposes. By ordering, you acknowledge:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li>You will not transport cartridges via commercial aircraft</li>
+                    <li>You will store and handle cartridges according to the included safety guidelines</li>
+                    <li>You are at least 18 years of age</li>
+                </ul>
 
-        <h2>6. Warranty</h2>
-        <p>Nimbus Suspensions warrants ∆P products against defects in materials and workmanship:</p>
-        <ul>
-            <li><strong>Head Unit, Gauge, Hose:</strong> 2 years from date of delivery</li>
-            <li><strong>Cartridges:</strong> 1 year from date of delivery</li>
-        </ul>
-        <p>This warranty covers manufacturing defects under normal use. It does not cover:</p>
-        <ul>
-            <li>Damage from misuse, abuse, or accident</li>
-            <li>Normal wear and tear</li>
-            <li>Modifications or repairs by unauthorized parties</li>
-            <li>Use contrary to product instructions</li>
-        </ul>
-        <p>To make a warranty claim, contact us at <a href="mailto:delta-p@nimbus-suspensions.com">delta-p@nimbus-suspensions.com</a> with your order details and description of the issue.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">6. Warranty</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">Nimbus Suspensions warrants ∆P products against defects in materials and workmanship:</p>
+                <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                    <li><strong class="text-gray-800">Head Unit, Gauge, Hose:</strong> 2 years from date of delivery</li>
+                    <li><strong class="text-gray-800">Cartridges:</strong> 1 year from date of delivery</li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-4">This warranty covers manufacturing defects under normal use. It does not cover:</p>
+                <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                    <li>Damage from misuse, abuse, or accident</li>
+                    <li>Normal wear and tear</li>
+                    <li>Modifications or repairs by unauthorized parties</li>
+                    <li>Use contrary to product instructions</li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-6">To make a warranty claim, contact us at <a href="mailto:hello@nimbus-suspensions.com" class="accent hover:underline">hello@nimbus-suspensions.com</a> with your order details and description of the issue.</p>
 
-        <h2>7. Returns and Refunds</h2>
-        <p><strong>Pre-order deposits:</strong> Fully refundable at any time before shipment.</p>
-        <p><strong>After delivery:</strong> If you receive a defective product, contact us within 30 days of delivery. We will repair, replace, or refund at our discretion. Return shipping for defective products will be covered by Nimbus Suspensions.</p>
-        <p>We do not accept returns for change of mind after delivery due to the hazardous materials nature of the product.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">7. Returns and Refunds</h2>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">Pre-order deposits:</strong> Fully refundable at any time before shipment.</p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">After delivery:</strong> If you receive a defective product, contact us within 30 days of delivery. We will repair, replace, or refund at our discretion. Return shipping for defective products will be covered by Nimbus Suspensions.</p>
+                <p class="text-gray-600 leading-relaxed mb-6">We do not accept returns for change of mind after delivery due to the hazardous materials nature of the product.</p>
 
-        <h2>8. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law:</p>
-        <ul>
-            <li>Our liability is limited to the purchase price of the product</li>
-            <li>We are not liable for indirect, incidental, special, or consequential damages</li>
-            <li>We are not liable for damages arising from misuse of the product</li>
-        </ul>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">8. Limitation of Liability</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">To the maximum extent permitted by law:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li>Our liability is limited to the purchase price of the product</li>
+                    <li>We are not liable for indirect, incidental, special, or consequential damages</li>
+                    <li>We are not liable for damages arising from misuse of the product</li>
+                </ul>
 
-        <h2>9. Product Use</h2>
-        <p>∆P is designed for charging shock absorbers with Schrader-type nitrogen fill valves. You are responsible for:</p>
-        <ul>
-            <li>Ensuring compatibility with your specific shock absorbers</li>
-            <li>Following manufacturer recommendations for your shocks</li>
-            <li>Using appropriate safety equipment and procedures</li>
-            <li>Compliance with local regulations regarding pressurized gases</li>
-        </ul>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">9. Product Use</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">∆P is designed for charging shock absorbers with Schrader-type nitrogen fill valves. You are responsible for:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                    <li>Ensuring compatibility with your specific shock absorbers</li>
+                    <li>Following manufacturer recommendations for your shocks</li>
+                    <li>Using appropriate safety equipment and procedures</li>
+                    <li>Compliance with local regulations regarding pressurized gases</li>
+                </ul>
 
-        <h2>10. Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated date. Your continued use of our services after changes constitutes acceptance of the modified Terms.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">10. Changes to Terms</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated date. Your continued use of our services after changes constitutes acceptance of the modified Terms.</p>
 
-        <h2>11. Governing Law</h2>
-        <p>These Terms are governed by the laws of the State of Florida, United States. Any disputes shall be resolved in the state or federal courts located in Palm Beach County, Florida.</p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">11. Governing Law</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">These Terms are governed by the laws of the State of Florida, United States. Any disputes shall be resolved in the state or federal courts located in Palm Beach County, Florida.</p>
 
-        <h2>12. Contact</h2>
-        <p>For questions about these Terms or your order:</p>
-        <p>
-            Nimbus Suspensions<br>
-            Palm Beach Gardens, FL<br>
-            Email: <a href="mailto:delta-p@nimbus-suspensions.com">delta-p@nimbus-suspensions.com</a>
-        </p>
+                <h2 class="text-xl font-bold text-black mt-10 mb-4">12. Contact</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">For questions about these Terms or your order:</p>
+                <div class="glass-dark rounded-2xl p-6">
+                    <p class="text-gray-800 font-semibold">Nimbus Suspensions</p>
+                    <p class="text-gray-600">Florida, USA</p>
+                    <p class="text-gray-600">Email: <a href="mailto:hello@nimbus-suspensions.com" class="accent hover:underline">hello@nimbus-suspensions.com</a></p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <a href="https://nimbus-suspensions.com" target="_blank">
-                    <img src="images/nimbus-logo-white.png" alt="Nimbus Suspensions" class="footer-logo">
+    <footer class="relative border-t border-gray-200 py-10" style="background: #fafafa;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="https://nimbus-suspensions.com" target="_blank" class="flex-shrink-0">
+                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-12 opacity-60 hover:opacity-100 transition-opacity">
                 </a>
-                <p>Oleo-pneumatic excellence since 2019</p>
-                <p class="footer-location">Palm Beach Gardens, Florida</p>
+                <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
+                    <a href="index.html" class="hover:text-black transition-colors">Home</a>
+                    <a href="index.html#story" class="hover:text-black transition-colors">Story</a>
+                    <a href="index.html#faq" class="hover:text-black transition-colors">FAQ</a>
+                    <a href="partners.html" class="hover:text-black transition-colors">Partners</a>
+                    <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
+                    <a href="privacy.html" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="terms.html" class="hover:text-black transition-colors">Terms</a>
+                </nav>
+                <p class="text-sm text-gray-500">© 2026 Nimbus Suspensions</p>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="index.html#story">The Story</a>
-                    <a href="index.html#technology">Technology</a>
-                    <a href="index.html#specifications">Specifications</a>
-                    <a href="index.html#faq">FAQ</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="https://nimbus-suspensions.com" target="_blank">Main Website</a>
-                    <a href="partners.html">Partner Program</a>
-                    <a href="mailto:delta-p@nimbus-suspensions.com">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Sale</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Nimbus Suspensions. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
