@@ -1,8 +1,7 @@
 /**
- * Nimbus ∆P — Stripe Checkout Integration
- *
- * Calls /api/create-checkout to create a Stripe Checkout Session
- * and redirects the user to complete payment.
+ * Nimbus ∆P — Stripe Payment Links Integration
+ * 
+ * Direct redirect to Stripe Payment Links (no backend required)
  */
 
 // =============================================================================
@@ -10,21 +9,24 @@
 // =============================================================================
 
 const CONFIG = {
-    // API endpoint (relative URL works on same domain)
-    checkoutEndpoint: '/api/create-checkout',
+    // Direct Stripe Payment Links
+    paymentLinks: {
+        standard: 'https://buy.stripe.com/fZu00k1dCfmB2Bl3D30gw0e',
+        extended: 'https://buy.stripe.com/28E00k9K8a2h4Jt7Tj0gw0f'
+    },
 
     // Product metadata for tracking
     products: {
         standard: {
-            name: '∆P Standard Kit',
+            name: '∆P Range Kit',
             deposit: 100,
-            fullPrice: 849,
+            fullPrice: 611,
             description: 'Head Unit V2, Gauge, Hose, 1x Filled Cartridge'
         },
         extended: {
-            name: '∆P Extended Kit',
+            name: '∆P Extended Range Kit',
             deposit: 100,
-            fullPrice: 1099,
+            fullPrice: 791,
             description: 'Head Unit V2, Gauge, Hose, 2x Filled Cartridges'
         }
     }
@@ -43,56 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-async function handlePreOrder(event) {
+function handlePreOrder(event) {
     event.preventDefault();
 
     const button = event.currentTarget;
     const productType = button.getAttribute('data-product');
 
-    if (!productType || !CONFIG.products[productType]) {
+    if (!productType || !CONFIG.paymentLinks[productType]) {
         console.error('Invalid product type:', productType);
         return;
     }
 
     // Show loading state
     const originalText = button.textContent;
-    button.textContent = 'Loading...';
+    button.textContent = 'Redirecting...';
     button.disabled = true;
 
-    try {
-        // Track the click (analytics)
-        trackPreOrderClick(productType);
+    // Track the click (analytics)
+    trackPreOrderClick(productType);
 
-        // Call our API to create a checkout session
-        const response = await fetch(CONFIG.checkoutEndpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ product: productType })
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.error || 'Failed to create checkout session');
-        }
-
-        if (data.url) {
-            // Redirect to Stripe Checkout
-            window.location.href = data.url;
-        } else {
-            throw new Error('No checkout URL returned');
-        }
-
-    } catch (error) {
-        console.error('Checkout error:', error);
-        alert('Something went wrong. Please try again or contact support.');
-
-        // Reset button
-        button.textContent = originalText;
-        button.disabled = false;
-    }
+    // Redirect to Stripe Payment Link
+    window.location.href = CONFIG.paymentLinks[productType];
 }
 
 // =============================================================================
@@ -131,6 +104,7 @@ function trackPreOrderClick(productType) {
     console.log('Pre-order initiated:', {
         product: productType,
         name: product.name,
-        deposit: product.deposit
+        deposit: product.deposit,
+        paymentLink: CONFIG.paymentLinks[productType]
     });
 }
