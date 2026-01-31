@@ -243,6 +243,9 @@
                 });
 
                 if (response.ok) {
+                    // Push to dataLayer for GTM to fire Meta Pixel Contact event
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({'event': 'contact_form_submit'});
                     status.textContent = '✓ Message sent! We\'ll respond within 24-48 hours.';
                     status.classList.remove('text-gray-500');
                     status.classList.add('text-green-600', 'font-medium');
