@@ -514,6 +514,10 @@
                 });
 
                 if (response.ok) {
+                    // Push to dataLayer for GTM/Meta tracking
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({ event: 'partner_form_submit' });
+
                     status.textContent = '✓ Application submitted! We\'ll be in touch within 48 hours.';
                     status.classList.remove('text-gray-500');
                     status.classList.add('text-green-600', 'font-medium');
