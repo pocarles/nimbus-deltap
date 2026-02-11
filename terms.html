@@ -178,15 +178,17 @@
         </div>
     </footer>
 
-    <!-- Google Tag Manager (deferred to avoid render-blocking) -->
+    <!-- Google Tag Manager (deferred to first interaction) -->
     <script>
-        window.addEventListener('load', function() {
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WVK6898Q');
-        });
+        (function(){var d=false;function g(){if(d)return;d=true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WVK6898Q');}
+        ['scroll','click','touchstart','keydown'].forEach(function(e){
+        window.addEventListener(e,g,{once:true,passive:true});});
+        setTimeout(g,5000);})();
     </script>
 </body>
 </html>

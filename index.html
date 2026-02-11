@@ -119,7 +119,7 @@
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <!-- Left: Content -->
-                <div class="space-y-8 reveal active">
+                <div class="space-y-8">
                     <div class="inline-flex items-center px-4 py-2 rounded-full glass-dark">
                         <span class="text-xs font-mono text-gray-600 uppercase tracking-wider">From the makers of <a href="https://nimbus-suspensions.com" target="_blank" class="hover:text-black transition-colors">Nimbus Suspensions</a></span>
                     </div>
@@ -150,10 +150,10 @@
                 </div>
 
                 <!-- Right: Product Image -->
-                <div class="relative reveal active lg:ml-auto">
+                <div class="relative lg:ml-auto">
                     <div class="relative">
                         <picture>
-                            <source srcset="images/hero-product.webp" type="image/webp">
+                            <source srcset="images/hero-product-640.webp 640w, images/hero-product.webp 1200w" sizes="(max-width: 768px) 100vw, 576px" type="image/webp">
                             <img src="images/hero-product.jpg" alt="Nimbus ∆P" class="w-full max-w-xl mx-auto drop-shadow-2xl rounded-lg" width="1200" height="1489" fetchpriority="high">
                         </picture>
                         <!-- Ambient glow -->
@@ -209,7 +209,10 @@
             
             <div class="reveal" style="transition-delay: 0.2s">
                 <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-black cursor-pointer group" id="yt-facade-index" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube.com/embed/j17Q8eMmGO8?rel=0&cc_load_policy=1&modestbranding=1&fs=1&iv_load_policy=3&vq=hd1080&autoplay=1\' title=\'Nimbus ∆P Video\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' referrerpolicy=\'strict-origin-when-cross-origin\' allowfullscreen></iframe>';this.style.cursor='default'">
-                    <img src="https://i.ytimg.com/vi/j17Q8eMmGO8/hqdefault.jpg" alt="Nimbus ∆P Video" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <picture>
+                        <source type="image/webp" srcset="images/video-thumbnail-640.webp 640w, images/video-thumbnail.webp 1280w" sizes="(max-width: 768px) 100vw, 80vw">
+                        <img src="images/video-thumbnail.jpg" alt="Nimbus ∆P Video" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1280" height="720">
+                    </picture>
                     <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
                         <svg class="w-16 h-16 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </div>
@@ -251,7 +254,7 @@
                 <div class="relative reveal lg:ml-auto" style="transition-delay: 0.2s">
                     <div class="relative">
                         <picture>
-                            <source srcset="images/gallery-5.webp" type="image/webp">
+                            <source srcset="images/gallery-5-640.webp 640w, images/gallery-5.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp">
                             <img src="images/gallery-5.jpg" alt="∆P in action" class="w-full rounded-lg shadow-2xl" loading="lazy" width="1200" height="1800">
                         </picture>
                         <!-- Ambient glow -->
@@ -339,7 +342,7 @@
                 <div class="relative reveal">
                     <div class="relative">
                         <picture>
-                            <source srcset="images/nimbus-deltap-gauge.webp" type="image/webp">
+                            <source srcset="images/nimbus-deltap-gauge-640.webp 640w, images/nimbus-deltap-gauge.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp">
                             <img src="images/nimbus-deltap-gauge.jpeg" alt="Nimbus DeltaP precision pressure gauge" class="w-full rounded-lg shadow-2xl" loading="lazy" width="1200" height="1489">
                         </picture>
                         <!-- Ambient glow -->
@@ -442,25 +445,25 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="reveal">
                     <picture>
-                        <source srcset="images/nimbus-deltap-4.webp" type="image/webp">
+                        <source srcset="images/nimbus-deltap-4-640.webp 640w, images/nimbus-deltap-4.webp 1200w" sizes="(max-width: 768px) 50vw, 25vw" type="image/webp">
                         <img src="images/nimbus-deltap-4.jpeg" alt="Nimbus DeltaP portable nitrogen system" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1489">
                     </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s">
                     <picture>
-                        <source srcset="images/nimbus-deltap-5.webp" type="image/webp">
+                        <source srcset="images/nimbus-deltap-5-640.webp 640w, images/nimbus-deltap-5.webp 1200w" sizes="(max-width: 768px) 50vw, 25vw" type="image/webp">
                         <img src="images/nimbus-deltap-5.jpg" alt="Nimbus DeltaP product shot" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
                     </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s">
                     <picture>
-                        <source srcset="images/nimbus-deltap-10.webp" type="image/webp">
+                        <source srcset="images/nimbus-deltap-10-640.webp 640w, images/nimbus-deltap-10.webp 1200w" sizes="(max-width: 768px) 50vw, 25vw" type="image/webp">
                         <img src="images/nimbus-deltap-10.jpg" alt="Nimbus DeltaP in use" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
                     </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.3s">
                     <picture>
-                        <source srcset="images/nimbus-deltap-8.webp" type="image/webp">
+                        <source srcset="images/nimbus-deltap-8-640.webp 640w, images/nimbus-deltap-8.webp 1200w" sizes="(max-width: 768px) 50vw, 25vw" type="image/webp">
                         <img src="images/nimbus-deltap-8.jpg" alt="Nimbus DeltaP components" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
                     </picture>
                 </div>
@@ -517,7 +520,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="reveal rounded-xl overflow-hidden shadow-2xl">
                 <picture>
-                    <source srcset="images/deltap-product-tarmac.webp" type="image/webp">
+                    <source srcset="images/deltap-product-tarmac-640.webp 640w, images/deltap-product-tarmac.webp 1200w" sizes="(max-width: 768px) 100vw, 80vw" type="image/webp">
                     <img src="images/deltap-product-tarmac.jpg" alt="∆P oleo-pneumatic shock absorber on aircraft tarmac with mechanic performing maintenance" class="w-full h-auto" width="1200" height="800" loading="lazy">
                 </picture>
             </div>
@@ -864,15 +867,17 @@
         });
     </script>
 
-    <!-- Google Tag Manager (deferred to avoid render-blocking) -->
+    <!-- Google Tag Manager (deferred to first interaction) -->
     <script>
-        window.addEventListener('load', function() {
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WVK6898Q');
-        });
+        (function(){var d=false;function g(){if(d)return;d=true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WVK6898Q');}
+        ['scroll','click','touchstart','keydown'].forEach(function(e){
+        window.addEventListener(e,g,{once:true,passive:true});});
+        setTimeout(g,5000);})();
     </script>
 </body>
 </html>
