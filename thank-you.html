@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVK6898Q');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Fire Lead event for deposit submission -->
+    <!-- Queue conversion events for GTM (loads deferred at end of body) -->
     <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({'event': 'deposit_submitted'});
-    // Track partner deposit from Stripe
     if (new URLSearchParams(window.location.search).get('source') === 'partner-deposit') {
         window.dataLayer.push({'event': 'partner_deposit', 'value': 100, 'currency': 'USD'});
     }
@@ -24,10 +15,15 @@
     <title>You're In! | Nimbus ∆P</title>
     <meta name="description" content="Your reservation is confirmed. Welcome to the first generation of ∆P owners.">
     <meta name="robots" content="noindex, nofollow">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Pre-compiled Tailwind CSS (replaces CDN runtime) -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         * { font-family: 'Inter', sans-serif; }
 
@@ -161,7 +157,10 @@
             <!-- Footer Brand -->
             <div class="mt-8 pt-6 border-t border-gray-200">
                 <a href="https://nimbus-suspensions.com" target="_blank" class="inline-flex items-center gap-3 text-gray-400 hover:text-gray-600 transition-colors text-sm">
-                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-6 opacity-60">
+                    <picture>
+                        <source srcset="images/nimbus-logo.webp" type="image/webp">
+                        <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-6 opacity-60">
+                    </picture>
                     <span>nimbus-suspensions.com</span>
                 </a>
             </div>
@@ -183,6 +182,17 @@
                 }]
             });
         }
+    </script>
+
+    <!-- Google Tag Manager (deferred to avoid render-blocking) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WVK6898Q');
+        });
     </script>
 </body>
 </html>

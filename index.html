@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVK6898Q');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nimbus ∆P | Portable Nitrogen System for Suspension Tuning</title>
     <meta name="description" content="The first portable nitrogen system that ships pre-filled and ready to use. Precision suspension tuning, anywhere. By Nimbus Suspensions.">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" type="image/webp" href="images/hero-product.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Pre-compiled Tailwind CSS (replaces CDN runtime) -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -92,14 +66,16 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVK6898Q"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between py-5">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-10 transition-all duration-300">
+                    <picture>
+                        <source srcset="images/nimbus-logo.webp" type="image/webp">
+                        <img src="images/nimbus-logo.png" alt="Nimbus" class="h-10 transition-all duration-300">
+                    </picture>
                 </a>
                 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                     <a href="#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
@@ -177,7 +153,10 @@
                 <!-- Right: Product Image -->
                 <div class="relative reveal active lg:ml-auto">
                     <div class="relative">
-                        <img src="images/hero-product.jpg" alt="Nimbus ∆P" class="w-full max-w-xl mx-auto drop-shadow-2xl rounded-lg">
+                        <picture>
+                            <source srcset="images/hero-product.webp" type="image/webp">
+                            <img src="images/hero-product.jpg" alt="Nimbus ∆P" class="w-full max-w-xl mx-auto drop-shadow-2xl rounded-lg" width="1200" height="1489" fetchpriority="high">
+                        </picture>
                         <!-- Ambient glow -->
                         <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
                     </div>
@@ -278,7 +257,10 @@
                 <!-- Right: Image -->
                 <div class="relative reveal lg:ml-auto" style="transition-delay: 0.2s">
                     <div class="relative">
-                        <img src="images/gallery-5.jpg" alt="∆P in action" class="w-full rounded-lg shadow-2xl" loading="lazy">
+                        <picture>
+                            <source srcset="images/gallery-5.webp" type="image/webp">
+                            <img src="images/gallery-5.jpg" alt="∆P in action" class="w-full rounded-lg shadow-2xl" loading="lazy" width="1200" height="1800">
+                        </picture>
                         <!-- Ambient glow -->
                         <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
                     </div>
@@ -363,7 +345,10 @@
                 <!-- Left: Image -->
                 <div class="relative reveal">
                     <div class="relative">
-                        <img src="images/nimbus-deltap-gauge.jpeg" alt="Nimbus DeltaP precision pressure gauge" class="w-full rounded-lg shadow-2xl" loading="lazy">
+                        <picture>
+                            <source srcset="images/nimbus-deltap-gauge.webp" type="image/webp">
+                            <img src="images/nimbus-deltap-gauge.jpeg" alt="Nimbus DeltaP precision pressure gauge" class="w-full rounded-lg shadow-2xl" loading="lazy" width="1200" height="1489">
+                        </picture>
                         <!-- Ambient glow -->
                         <div class="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent blur-3xl -z-10"></div>
                     </div>
@@ -463,16 +448,28 @@
 
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="reveal">
-                    <img src="images/nimbus-deltap-4.jpeg" alt="Nimbus DeltaP portable nitrogen system" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy">
+                    <picture>
+                        <source srcset="images/nimbus-deltap-4.webp" type="image/webp">
+                        <img src="images/nimbus-deltap-4.jpeg" alt="Nimbus DeltaP portable nitrogen system" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1489">
+                    </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s">
-                    <img src="images/nimbus-deltap-5.jpg" alt="Nimbus DeltaP product shot" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy">
+                    <picture>
+                        <source srcset="images/nimbus-deltap-5.webp" type="image/webp">
+                        <img src="images/nimbus-deltap-5.jpg" alt="Nimbus DeltaP product shot" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
+                    </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s">
-                    <img src="images/nimbus-deltap-10.jpg" alt="Nimbus DeltaP in use" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy">
+                    <picture>
+                        <source srcset="images/nimbus-deltap-10.webp" type="image/webp">
+                        <img src="images/nimbus-deltap-10.jpg" alt="Nimbus DeltaP in use" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
+                    </picture>
                 </div>
                 <div class="reveal" style="transition-delay: 0.3s">
-                    <img src="images/nimbus-deltap-8.jpg" alt="Nimbus DeltaP components" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy">
+                    <picture>
+                        <source srcset="images/nimbus-deltap-8.webp" type="image/webp">
+                        <img src="images/nimbus-deltap-8.jpg" alt="Nimbus DeltaP components" class="w-full aspect-[4/5] object-cover rounded-lg shadow-xl" loading="lazy" width="1200" height="1800">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -526,7 +523,10 @@
     <section class="relative py-16" style="background: linear-gradient(to bottom, #f9fafb, #fafafa);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="reveal rounded-xl overflow-hidden shadow-2xl">
-                <img src="images/deltap-product-tarmac.jpg" alt="∆P oleo-pneumatic shock absorber on aircraft tarmac with mechanic performing maintenance" class="w-full h-auto" loading="lazy">
+                <picture>
+                    <source srcset="images/deltap-product-tarmac.webp" type="image/webp">
+                    <img src="images/deltap-product-tarmac.jpg" alt="∆P oleo-pneumatic shock absorber on aircraft tarmac with mechanic performing maintenance" class="w-full h-auto" width="1200" height="800" loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
@@ -734,7 +734,10 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
+                    <picture>
+                        <source srcset="images/nimbus-logo.webp" type="image/webp">
+                        <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
+                    </picture>
                 </a>
 
                 <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
@@ -853,6 +856,17 @@
                 btn.textContent = 'Notify Me';
                 btn.classList.remove('opacity-50', 'cursor-not-allowed');
             }
+        });
+    </script>
+
+    <!-- Google Tag Manager (deferred to avoid render-blocking) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WVK6898Q');
         });
     </script>
 </body>

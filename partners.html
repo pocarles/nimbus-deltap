@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVK6898Q');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partner Program | Nimbus ∆P</title>
     <meta name="description" content="Add a high-margin revenue stream with almost zero effort. Join the ∆P Partner Network and become the go-to nitrogen refill point in your area.">
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Pre-compiled Tailwind CSS (replaces CDN runtime) -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
         .glass-dark {
@@ -50,7 +36,10 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between py-5">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-10 transition-all duration-300">
+                    <picture>
+                        <source srcset="images/nimbus-logo.webp" type="image/webp">
+                        <img src="images/nimbus-logo.png" alt="Nimbus" class="h-10 transition-all duration-300">
+                    </picture>
                 </a>
                 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                     <a href="/#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
@@ -824,7 +813,10 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-4">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
+                    <picture>
+                        <source srcset="images/nimbus-logo.webp" type="image/webp">
+                        <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
+                    </picture>
                 </a>
                 <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
                     <a href="/" class="hover:text-black transition-colors">Home</a>
@@ -871,6 +863,17 @@
         }
         updateHeader(); // Set initial state
         window.addEventListener('scroll', updateHeader);
+    </script>
+
+    <!-- Google Tag Manager (deferred to avoid render-blocking) -->
+    <script>
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WVK6898Q');
+        });
     </script>
 </body>
 </html>
