@@ -31,16 +31,9 @@
     <style>
         body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
         .glass-dark {
-            background: rgba(0, 0, 0, 0.02);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-        }
-        .hover-lift {
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .hover-lift:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.06);
         }
         .accent { color: #B5886A; }
         .accent-bg { background-color: #B5886A; }
@@ -57,18 +50,18 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between py-5">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-16 lg:h-20 transition-all duration-300">
+                    <img src="images/nimbus-logo.png" alt="Nimbus" class="h-10 transition-all duration-300">
                 </a>
                 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                     <a href="/#story" class="text-gray-600 hover:text-black transition-colors">Story</a>
-                    <a href="/#technology" class="text-gray-600 hover:text-black transition-colors">Technology</a>
+                    <a href="/#applications" class="text-gray-600 hover:text-black transition-colors">Applications</a>
                     <a href="/#specifications" class="text-gray-600 hover:text-black transition-colors">Specs</a>
                     <a href="/#faq" class="text-gray-600 hover:text-black transition-colors">FAQ</a>
                     <a href="partners.html" class="text-gray-600 hover:text-black transition-colors">Partners</a>
                     <a href="contact.html" class="text-gray-600 hover:text-black transition-colors">Contact</a>
                 </nav>
                 <div class="flex items-center gap-4">
-                    <a href="/#reserve" class="hidden sm:inline-flex px-6 py-3 bg-black text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                    <a href="/#reserve" class="hidden sm:inline-flex px-6 py-3 bg-black text-white text-sm font-semibold rounded hover:bg-gray-800 transition-all duration-300">
                         Reserve Now
                     </a>
                     <!-- Mobile menu button -->
@@ -84,12 +77,12 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-6 py-4 space-y-3">
                 <a href="/#story" class="block text-gray-600 hover:text-black py-2">Story</a>
-                <a href="/#technology" class="block text-gray-600 hover:text-black py-2">Technology</a>
+                <a href="/#applications" class="block text-gray-600 hover:text-black py-2">Applications</a>
                 <a href="/#specifications" class="block text-gray-600 hover:text-black py-2">Specs</a>
                 <a href="/#faq" class="block text-gray-600 hover:text-black py-2">FAQ</a>
                 <a href="partners.html" class="block text-gray-600 hover:text-black py-2">Partners</a>
                 <a href="contact.html" class="block text-gray-600 hover:text-black py-2">Contact</a>
-                <a href="/#reserve" class="block w-full text-center px-6 py-3 bg-black text-white text-sm font-semibold rounded-full mt-4">Reserve Now</a>
+                <a href="/#reserve" class="block w-full text-center px-6 py-3 bg-black text-white text-sm font-semibold rounded mt-4">Reserve Now</a>
             </div>
         </div>
     </header>
@@ -105,10 +98,10 @@
                 The ∆P Partner Program gives you everything you need to offer portable nitrogen refills. Low investment, high margins, recurring revenue.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#apply" class="px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                <a href="#apply" class="px-8 py-4 bg-black text-white font-semibold rounded hover:bg-gray-800 transition-all duration-300">
                     Reserve My Spot — $100 Refundable Deposit
                 </a>
-                <a href="#apply" class="px-8 py-4 glass-dark text-black font-semibold rounded-full hover-lift">
+                <a href="#apply" class="px-8 py-4 glass-dark text-black font-semibold rounded">
                     Have Questions? Talk to Us First
                 </a>
             </div>
@@ -127,7 +120,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
@@ -136,7 +129,7 @@
                     <h3 class="font-bold text-black mb-2">Recurring Revenue</h3>
                     <p class="text-sm text-gray-600">Customers need refills every season. Build a loyal base with predictable repeat business.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
@@ -145,7 +138,7 @@
                     <h3 class="font-bold text-black mb-2">No Complex Training</h3>
                     <p class="text-sm text-gray-600">Simple, straightforward process. If you can use a tire inflator, you can do this.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -154,7 +147,7 @@
                     <h3 class="font-bold text-black mb-2">Works With Your Existing Business</h3>
                     <p class="text-sm text-gray-600">Add this to what you already do. No need to pivot or change your core operations.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
@@ -196,7 +189,7 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="text-center">
-                    <div class="w-16 h-16 accent-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 accent-bg rounded-lg flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
@@ -206,7 +199,7 @@
                     <p class="text-sm text-gray-600">Attach our charging ramp to the customer's equipment — simple, secure connection.</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 accent-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 accent-bg rounded-lg flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
@@ -216,7 +209,7 @@
                     <p class="text-sm text-gray-600">Fill with nitrogen using your existing supply. The ramp handles the pressure — done in seconds.</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 accent-bg rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 accent-bg rounded-lg flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
@@ -236,7 +229,7 @@
                 <p class="text-sm font-mono uppercase tracking-wider mb-4 accent">See It in Action</p>
                 <h2 class="text-3xl lg:text-4xl font-black tracking-tight text-black">Watch the ∆P Demo</h2>
             </div>
-            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
+            <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-black">
                 <iframe class="absolute inset-0 w-full h-full"
                     src="https://www.youtube.com/embed/j17Q8eMmGO8?rel=0&cc_load_policy=1&modestbranding=1&fs=1&iv_load_policy=3&vq=hd1080"
                     title="Nimbus ∆P Demo"
@@ -257,22 +250,22 @@
             </div>
 
             <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
-                <div class="text-center glass-dark rounded-2xl p-8">
+                <div class="text-center glass-dark rounded-lg p-8">
                     <div class="text-5xl font-black accent mb-2">$30</div>
                     <div class="text-gray-700 font-medium mb-1">Suggested refill price</div>
                     <div class="text-xs text-gray-400">You set your own rate</div>
                 </div>
-                <div class="text-center glass-dark rounded-2xl p-8 border-2 border-black/10">
+                <div class="text-center glass-dark rounded-lg p-8 border-2 border-black/10">
                     <div class="text-5xl font-black text-black mb-2">$3</div>
                     <div class="text-gray-700 font-medium mb-1">Nimbus fee per refill</div>
                     <div class="text-xs text-gray-400">Flat rate, no surprises</div>
                 </div>
-                <div class="text-center glass-dark rounded-2xl p-8">
+                <div class="text-center glass-dark rounded-lg p-8">
                     <div class="text-5xl font-black text-gray-400 mb-2">$0.50</div>
                     <div class="text-gray-700 font-medium mb-1">Nitrogen cost</div>
                     <div class="text-xs text-gray-400">Your only consumable</div>
                 </div>
-                <div class="text-center glass-dark rounded-2xl p-8">
+                <div class="text-center glass-dark rounded-lg p-8">
                     <div class="text-5xl font-black text-green-600 mb-2">$26.50</div>
                     <div class="text-gray-700 font-medium mb-1">Your profit per refill</div>
                     <div class="text-xs text-gray-400">88% gross margin</div>
@@ -281,7 +274,7 @@
 
             <p class="text-center text-xs text-gray-400 mb-8">Nitrogen and operating costs may vary by location and supplier.</p>
 
-            <div class="max-w-2xl mx-auto glass-dark rounded-3xl p-8 text-center mb-6">
+            <div class="max-w-2xl mx-auto glass-dark rounded-xl p-8 text-center mb-6">
                 <p class="text-gray-600 mb-4">At just 10 refills per week:</p>
                 <div class="text-4xl font-black text-black mb-2">$13,780 / year</div>
                 <p class="text-gray-500">Additional revenue from a 5-minute service</p>
@@ -319,8 +312,8 @@
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Path 1: Shops -->
-                <div class="glass-dark rounded-3xl p-8 hover-lift">
-                    <div class="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6">
+                <div class="glass-dark rounded-xl p-8">
+                    <div class="w-14 h-14 bg-black rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
@@ -347,8 +340,8 @@
                 </div>
 
                 <!-- Path 2: Solo Entrepreneurs -->
-                <div class="glass-dark rounded-3xl p-8 hover-lift border-2 border-black/10">
-                    <div class="w-14 h-14 accent-bg rounded-2xl flex items-center justify-center mb-6">
+                <div class="glass-dark rounded-xl p-8 border-2 border-black/10">
+                    <div class="w-14 h-14 accent-bg rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
@@ -388,63 +381,63 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Refill Ramp</h3>
                     <p class="text-sm text-gray-600">Connects to any standard nitrogen bottle. Professional-grade equipment included.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Official Partner Status</h3>
                     <p class="text-sm text-gray-600">Customer warranty stays valid when refilled by an official partner.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Partner Locator Listing</h3>
                     <p class="text-sm text-gray-600">ONLY official partners are listed. Customers find you on our map.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Customer Referrals</h3>
                     <p class="text-sm text-gray-600">We route buyers to their nearest partner based on location.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Sell ∆P Products</h3>
                     <p class="text-sm text-gray-600">Authorized to sell cartridges, ∆P Head V2, and all future accessories.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">No Minimums, No Franchise Fees</h3>
                     <p class="text-sm text-gray-600">No minimum stock, no minimum sales, no royalties. Just a flat $3 per refill to Nimbus — the rest is yours.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">One-of-a-Kind Product</h3>
                     <p class="text-sm text-gray-600">No other portable cartridge operates at this pressure, at this size and weight. You're offering something your competitors simply can't.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                     </div>
                     <h3 class="font-bold text-black mb-2">Drive Foot Traffic</h3>
                     <p class="text-sm text-gray-600">Customers come to you for refills — and discover the rest of your business while they're there.</p>
                 </div>
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                     </div>
@@ -494,7 +487,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass-dark rounded-3xl p-8">
+                <div class="glass-dark rounded-xl p-8">
                     <h3 class="text-xl font-bold text-black mb-4">Partner Starter Kit</h3>
                     <ul class="space-y-3 mb-6">
                         <li class="flex items-center gap-3">
@@ -537,7 +530,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 <!-- 1. Off-Road & 4×4 Shops -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -547,7 +540,7 @@
                     <p class="text-sm text-gray-600">Your customers already understand nitrogen.</p>
                 </div>
                 <!-- 2. Aviation Maintenance / FBOs -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
@@ -557,7 +550,7 @@
                     <p class="text-sm text-gray-600">Strut servicing for light aircraft.</p>
                 </div>
                 <!-- 3. Suspension Specialists -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
@@ -568,7 +561,7 @@
                     <p class="text-sm text-gray-600">Natural add-on to your core service.</p>
                 </div>
                 <!-- 4. Racing Teams & Performance Shops -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -578,7 +571,7 @@
                     <p class="text-sm text-gray-600">Track-ready service for competitive teams.</p>
                 </div>
                 <!-- 5. Mobile Operators / Solo Entrepreneurs -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -588,7 +581,7 @@
                     <p class="text-sm text-gray-600">Mobile refills as a flexible side business.</p>
                 </div>
                 <!-- 6. Industrial Service -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -598,7 +591,7 @@
                     <p class="text-sm text-gray-600">Die springs, gas struts, machinery.</p>
                 </div>
                 <!-- 7. Commercial Door Installers -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift">
+                <div class="glass-dark rounded-lg p-6">
                     <div class="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
@@ -608,7 +601,7 @@
                     <p class="text-sm text-gray-600">Fire doors, gates, heavy closers.</p>
                 </div>
                 <!-- 8. Engineering Students -->
-                <div class="glass-dark rounded-2xl p-6 hover-lift border-2 border-black/10">
+                <div class="glass-dark rounded-lg p-6 border-2 border-black/10">
                     <div class="w-12 h-12 accent-bg rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -665,7 +658,7 @@
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
                 <!-- Left: Reserve Your Spot -->
-                <div class="glass-dark rounded-3xl p-8 lg:p-10 flex flex-col">
+                <div class="glass-dark rounded-xl p-8 lg:p-10 flex flex-col">
                     <h3 class="text-2xl font-bold text-black mb-1">Partner Starter Kit</h3>
                     <p class="text-gray-500 mb-6">Everything you need to get started</p>
 
@@ -699,7 +692,7 @@
                     </ul>
 
                     <div class="mt-auto">
-                        <a href="https://buy.stripe.com/eVq28s4pO8Ydgsb7Tj0gw0g" class="block w-full text-center px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                        <a href="https://buy.stripe.com/eVq28s4pO8Ydgsb7Tj0gw0g" class="block w-full text-center px-6 py-3 bg-black text-white font-semibold rounded hover:bg-gray-800 transition-all duration-300">
                             Reserve Partner Kit
                         </a>
                         <p class="text-center text-xs text-gray-400 mt-3">$100 refundable deposit. 100% refundable if we don't launch.</p>
@@ -708,7 +701,7 @@
                 </div>
 
                 <!-- Right: Contact Form -->
-                <div class="glass-dark rounded-3xl p-8 lg:p-10 flex flex-col">
+                <div class="glass-dark rounded-xl p-8 lg:p-10 flex flex-col">
                     <h3 class="text-2xl font-bold text-black mb-1">Have Questions?</h3>
                     <p class="text-gray-500 mb-6">Not ready yet? Reach out and we'll talk.</p>
 
@@ -755,7 +748,7 @@
                     <textarea name="message" rows="3" class="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all text-sm" placeholder="What you do, why you're interested..."></textarea>
                 </div>
                 <div class="mt-auto">
-                    <button type="submit" id="submit-btn" class="w-full px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                    <button type="submit" id="submit-btn" class="w-full px-6 py-3 bg-black text-white font-semibold rounded hover:bg-gray-800 transition-all duration-300">
                         Send Message
                     </button>
                     <p id="form-status" class="text-center text-sm text-gray-500 mt-3">We'll respond within 48 hours</p>
@@ -830,7 +823,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-4">
                 <a href="/" class="flex-shrink-0">
-                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-12 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="images/nimbus-logo.png" alt="Nimbus Suspensions" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
                 </a>
                 <nav class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
                     <a href="/" class="hover:text-black transition-colors">Home</a>
