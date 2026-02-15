@@ -23,5 +23,8 @@ Thumbs.db
 .vercel/
 .vercel
 .env*.local
+
+# Local office files / working notes (do not publish)
 .~lock.*
-.gitignore
+DeltaP-Financial-Model.xlsx
+strategy/
